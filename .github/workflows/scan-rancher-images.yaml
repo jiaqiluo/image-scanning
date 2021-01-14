@@ -8,6 +8,8 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.8'
-      - run: git clone https://github.com/rancher/rancher
+      - run: curl -L https://github.com/rancher/rancher/releases/download/v2.5.5/rancher-images.txt -o rancher-images.txt
       - run: ls
-      - run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
+      - run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b $(pwd)
+      - run: python run.py
+      - run: cat cves.csv
