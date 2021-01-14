@@ -1,0 +1,13 @@
+name: image-scanning
+on: [push]
+jobs:
+  run-scanner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - run: git clone https://github.com/rancher/rancher
+      - run: ls
+      - run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b /usr/local/bin
