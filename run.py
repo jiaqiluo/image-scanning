@@ -22,7 +22,7 @@ with open('mirrored_list.txt', 'r', newline='') as mirrorfile:
         a = line.split(" ")
         mirrored_image = a[1] + ":" + a[2]
         mirrored_images[mirrored_image] = True
-with open('cves.csv', 'a', newline='') as csvfile:
+with open('cves.csv', 'w', newline='') as csvfile:
     header = ['image', 'package_name', 'type', 'vulnerability_id', 'severity', 'url', 'patched_version', 'mirrored']
     writer = csv.DictWriter(csvfile, fieldnames=header)
 
