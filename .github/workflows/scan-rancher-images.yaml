@@ -1,6 +1,6 @@
 name: image-scanning
 on:
-  push:
+  # push:
   schedule:
     - cron: '*/15 * * * *'
 jobs:
@@ -18,7 +18,7 @@ jobs:
       - run: python run.py
       - run: git config --global user.name "Image Scanning Bot"
       - run: git config --global user.email "githubaction-no-reply@rancher.com"
-      - run: if git diff | grep -q "cves.csv"; then echo "new cves found" && git add cves.csv && git commit -m "Update cves" && git push origin update-cves; fi
-      - run: if ! gh pr list | grep -q "\[Automated-CVE-Update\]"; then echo "PR does not exist... Creating..."; gh pr create --title "[Automated-CVE-Update]" --body "Updating CVEs"; fi
+      - run: hasUpdate=false && if git diff | grep -q "cves.csv"; then hasUpdate=true; echo "new cves found" && git add cves.csv && git commit -m "Update cves" && git push origin update-cves; fi
+      - run: if [hasUpdate] && ! [gh pr list | grep -q "\[Automated-CVE-Update\]"]; then echo "PR does not exist... Creating..."; gh pr create --title "[Automated-CVE-Update]" --body "Updating CVEs"; fi
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
