@@ -1,8 +1,7 @@
 name: image-scanning
 on:
-  # push:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '0 0 * * SUN'
 jobs:
   run-scanner:
     runs-on: ubuntu-latest
