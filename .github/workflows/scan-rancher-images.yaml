@@ -12,7 +12,7 @@ jobs:
           python-version: '3.8'
       - run: curl -L https://github.com/rancher/rancher/releases/download/v2.5.5/rancher-images.txt -o rancher-images.txt
       - run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b $(pwd)
-      - run: python run.py
-      - run: git config --global user.name "Image Scanning Bot"
-      - run: git config --global user.email "githubaction-no-reply@rancher.com"
-      - run: hasUpdate=false && if git diff | grep -q "cves.csv"; then hasUpdate=true; echo "new cves found" && git add cves.csv && git commit -m "Update cves" && git push origin main; fi
+        # - run: python run.py
+        # - run: git config --global user.name "Image Scanning Bot"
+        # - run: git config --global user.email "githubaction-no-reply@rancher.com"
+        # - run: hasUpdate=false && if git diff | grep -q "cves.csv"; then hasUpdate=true; echo "new cves found" && git add cves.csv && git commit -m "Update cves" && git push origin main; fi
