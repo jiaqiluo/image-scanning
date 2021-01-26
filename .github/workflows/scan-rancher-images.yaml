@@ -7,12 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: '^1.14.1'
       - uses: actions/setup-python@v2
         with:
           python-version: '3.8'
-      - run: curl -L https://github.com/rancher/rancher/releases/download/v2.5.5/rancher-images.txt -o rancher-images.txt
+      - run: unset GOPATH
+      - run: ./scripts/generate-images.sh
       - run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b $(pwd)
-        # - run: python run.py
-        # - run: git config --global user.name "Image Scanning Bot"
-        # - run: git config --global user.email "githubaction-no-reply@rancher.com"
-        # - run: hasUpdate=false && if git diff | grep -q "cves.csv"; then hasUpdate=true; echo "new cves found" && git add cves.csv && git commit -m "Update cves" && git push origin main; fi
+      - run: python run.py cves-v2.4.csv,cves-v2.5.csv rancher-images-v2.4.txt,rancher-images-v2.5.txt
+      - run: git config --global user.name "Image Scanning Bot"
+      - run: git config --global user.email "githubaction-no-reply@rancher.com"
+      - run: hasUpdate=false && if git status | grep -q "cves-v2.4.csv\|cves-v2.5.csv"; then hasUpdate=true; echo "new cves found" && git add cves-v2.4.csv cves-v2.5.csv && git commit -m "Update cves" && git push origin main; fi
