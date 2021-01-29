@@ -13,10 +13,11 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.8'
+      - run: pip install -r requirements.txt
       - run: unset GOPATH
       - run: ./scripts/generate-images.sh
       - run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b $(pwd)
-      - run: python run.py docs/_data/cves-v2.4.csv,docs/_data/cves-v2.5.csv rancher-images-v2.4.txt,rancher-images-v2.5.txt
+      - run: python run.py docs/_data/cves-v2.4.csv,docs/_data/cves-v2.5.csv rancher-images-v2.4.txt,rancher-images-v2.5.txt ${{ secrets.ISSUE_REPO }} ${{ secrets.BOT_TOKEN }}
       - run: git config --global user.name "Image Scanning Bot"
       - run: git config --global user.email "githubaction-no-reply@rancher.com"
-      - run: hasUpdate=false && if git status | grep -q "cves-v2.4.csv\|cves-v2.5.csv"; then hasUpdate=true; echo "new cves found" && git add docs/_data/cves-v2.4.csv docs/_data/cves-v2.5.csv && git commit -m "Update cves" && git push origin main; fi
+      - run: hasUpdate=false && if git status | grep -q "cves-v2.4.csv\|cves-v2.5.csv"; then hasUpdate=true; echo "new cves found" && git add docs/_data/cves-v2.4.csv docs/_data/cves-v2.5.csv && git commit -m "Update cves" && git push origin add-automated-issues; fi
