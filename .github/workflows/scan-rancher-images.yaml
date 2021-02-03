@@ -16,7 +16,7 @@ jobs:
       - run: unset GOPATH
       - run: ./scripts/generate-images.sh
       - run: curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b $(pwd)
-      - run: python run.py cves-v2.4.csv,cves-v2.5.csv rancher-images-v2.4.txt,rancher-images-v2.5.txt
+      - run: python run.py docs/_data/cves-v2.4.csv,docs/_data/cves-v2.5.csv rancher-images-v2.4.txt,rancher-images-v2.5.txt
       - run: git config --global user.name "Image Scanning Bot"
       - run: git config --global user.email "githubaction-no-reply@rancher.com"
-      - run: hasUpdate=false && if git status | grep -q "cves-v2.4.csv\|cves-v2.5.csv"; then hasUpdate=true; echo "new cves found" && git add cves-v2.4.csv cves-v2.5.csv && git commit -m "Update cves" && git push origin main; fi
+      - run: hasUpdate=false && if git status | grep -q "cves-v2.4.csv\|cves-v2.5.csv"; then hasUpdate=true; echo "new cves found" && git add docs/_data/cves-v2.4.csv docs/_data/cves-v2.5.csv && git commit -m "Update cves" && git push origin main; fi

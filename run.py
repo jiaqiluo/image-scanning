@@ -1,7 +1,6 @@
 import json
 import subprocess
 import csv
-import array
 import os
 import sys
 
@@ -66,7 +65,6 @@ for index, cves_csv_filename in enumerate(cves_csv_filenames):
                 cve_memory[image] = obj
             vulnerabilities = obj[0]["Vulnerabilities"]
             base_type = obj[0]["Type"]
-            # unique_vulnerabilities = {}
             if vulnerabilities is None:
                 continue
             for vulnerability in vulnerabilities:
