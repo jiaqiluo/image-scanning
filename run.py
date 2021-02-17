@@ -10,6 +10,7 @@ import time
 cve_report_label = "cve-report"
 critical_cves_label = "critical-cves"
 
+disable_issues = True
 
 def run():
     if len(sys.argv) != 5:
@@ -116,6 +117,9 @@ def run():
                         mirrored_image = parts[0]
                         continue
                     mirrored_image = parts[1]
+
+    if disable_issues:
+        return
 
     gh = github.Github(login_or_token=token)
     rs = gh.get_repo(repository)
