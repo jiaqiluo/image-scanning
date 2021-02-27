@@ -6,21 +6,27 @@ import sys
 import github
 import github.Label
 import time
+from image import Image
 
 cve_report_label = "cve-report"
 critical_cves_label = "critical-cves"
 
-disable_issues = True
+disable_issues = False
+
+color_counter = 0
+
 
 def run():
-    if len(sys.argv) != 5:
-        print("Must pass four arguments, images text file name, name of csv file, issue repository, and github token.")
+    if len(sys.argv) != 6:
+        print("Must pass four arguments, images text file names, names of csv files, release names, issue repository,"
+              "and github token.")
         sys.exit(1)
 
     cves_csv_filenames = sys.argv[1].split(",")
     images_text_filenames = sys.argv[2].split(",")
-    repository = sys.argv[3]
-    token = sys.argv[4]
+    release_names = sys.argv[3].split(",")
+    repository = sys.argv[4]
+    token = sys.argv[5]
 
     mirrored_images = {}
 
@@ -37,14 +43,13 @@ def run():
 
     for index, cves_csv_filename in enumerate(cves_csv_filenames):
         images_text_filename = images_text_filenames[index]
+        release = release_names[index]
         with open(os.getcwd() + "/" + images_text_filename) as images_file:
             images = images_file.read()
 
-        images_list = images.split()
-        vulnerabilities = []
+        images_sources_list = images.split("\n")
         skipped_images = []
         image_info = {}
-        # cve_memory = {}
         with open(cves_csv_filename, 'r', newline='') as csvfile:
             csv_reader = csv.DictReader(csvfile)
             for line in csv_reader:
@@ -69,22 +74,28 @@ def run():
             writer = csv.DictWriter(csvfile, fieldnames=header)
 
             writer.writeheader()
-            for image in images_list:
+            for image_and_sources in images_sources_list:
+                if image_and_sources == "":
+                    continue
+                image, sources = parse_image_and_sources(image_and_sources)
                 if cve_memory.get(image, None) is not None:
-                    obj = cve_memory[image]
+                    cve_memory[image].add_release(release)
+                    obj = cve_memory[image].cve_data
                 else:
                     output = subprocess.getoutput("./trivy image -s HIGH,CRITICAL -f json -t 3m0s -o output.txt " + image)
-                    scan_output = ""
                     with open("output.txt") as scan_output_file:
                         scan_output = scan_output_file.read()
                     if scan_output is None or scan_output == "null" or scan_output == "":
                         skipped_images.append(image)
                         continue
                     obj = json.loads(scan_output)
-                    cve_memory[image] = obj
+                    cve_memory[image] = Image(release, obj)
+
+                for source in sources.split(","):
+                    cve_memory[image].add_source(source)
+
                 vulnerabilities = obj[0]["Vulnerabilities"]
                 base_type = obj[0]["Type"]
-                # unique_vulnerabilities = {}
                 if vulnerabilities is None:
                     continue
                 for vulnerability in vulnerabilities:
@@ -135,12 +146,12 @@ def run():
 
     for image, info in cve_memory.items():
         body = "|Vulnerability ID|Title|Package Name|Fixed Version|Severity|URL|\n|---|---|---|---|---|---|"
-        vulnerabilities = info[0]["Vulnerabilities"]
+        vulnerabilities = info.cve_data[0]["Vulnerabilities"]
         critical = False
         if vulnerabilities is None:
             print(image + " has no vulnerabilities")
             continue
-        for vulnerability in info[0]["Vulnerabilities"]:
+        for vulnerability in info.cve_data[0]["Vulnerabilities"]:
             vulnerability_id = vulnerability["VulnerabilityID"]
             package_name = vulnerability['PkgName']
             title = vulnerability.get("Title", "")
@@ -154,24 +165,27 @@ def run():
                 critical = True
             body = body + "\n|" + vulnerability_id + "|" + title + "|" + package_name + "|" + fixed_version + "|" + \
                 severity + "|" + primary_url + "|"
+        current_source_labels = get_current_source_labels(rs)
         issue_number = image_issue_number.get(image, None)
+        source_labels = generate_source_labels(rs, current_source_labels, info.sources)
+        release_labels = generate_release_labels(rs, current_source_labels, info.releases)
+        all_labels = [cve_report_label] + source_labels + release_labels
+        if critical:
+            all_labels.append(critical_cves_label)
         if issue_number is None:
-            labels = [cve_report_label]
-            if critical:
-                labels.append(critical_cves_label)
             print("creating CVE Report issue for " + image)
-            rs.create_issue(title="[CVE Report]: " + image, body=body, labels=labels)
+            rs.create_issue(title="[CVE Report]: " + image, body=body, labels=all_labels)
         else:
             current_issue = rs.get_issue(issue_number)
             has_update = False
             if current_issue.body != body:
-                current_issue.edit(body=body)
-                has_update = True
-            if has_critical_cve_label(current_issue.labels) != critical:
-                if critical:
-                    current_issue.add_to_labels(critical_cves_label)
+                if body == "":
+                    current_issue.edit(state="closed")
                 else:
-                    current_issue.remove_from_labels(critical_cves_label)
+                    current_issue.edit(body=body)
+                has_update = True
+            if set(map(lambda x: x.name, current_issue.get_labels())) != set(all_labels):
+                current_issue.set_labels(*all_labels)
                 has_update = True
             if has_update:
                 print("updating CVE Report issue for " + image)
@@ -179,6 +193,14 @@ def run():
         # issue creation faces additional rate limiting that can be hit even if below
         # user limit. It is necessary to wait in between requests.
         time.sleep(20)
+    mark_as_can_close(rs, cve_memory, image_issue_number)
+
+
+def parse_image_and_sources(image_and_sources):
+    parts = image_and_sources.split()
+    if len(parts) == 1:
+        return parts[0], ""
+    return parts[0], parts[1]
 
 
 def has_critical_cve_label(gh_labels):
@@ -186,6 +208,72 @@ def has_critical_cve_label(gh_labels):
         if label.name == critical_cves_label:
             return True
     return False
+
+
+def get_current_source_labels(rs):
+    source_labels = {}
+    labels = rs.get_labels()
+
+    for label in labels:
+        if label.name.startswith("cve/"):
+            source_labels[label.name] = True
+    return source_labels
+
+
+def create_missing_labels(rs, current_labels, check_labels):
+    for label in check_labels:
+        if current_labels.get(label, None):
+            continue
+        rs.create_label(
+            name=label,
+            description="automatically created label indicating where image is used",
+            color=random_color()
+        )
+
+
+def generate_source_labels(rs, current_labels, sources):
+    labels = []
+    for source, hasSource in sources.items():
+        if not hasSource:
+            continue
+        labels.append("cve/" + source.split(":")[0])
+    create_missing_labels(rs, current_labels, labels)
+    return labels
+
+
+def generate_release_labels(rs, current_labels, releases):
+    labels = []
+    for release in releases:
+        labels.append("cve/" + release)
+    create_missing_labels(rs, current_labels, labels)
+    return labels
+
+
+def random_color():
+    global color_counter
+    colors = ("4287f5", "3ef08e", "ae35f0", "a4a1c2", "ffb300", "ff00cc")
+    color_counter = (color_counter + 1) % len(colors)
+    return colors[color_counter]
+
+
+def mark_as_can_close(rs, cve_memory, image_issues):
+    can_close_label = "cve/can-close"
+    has_can_close_label = False
+    labels = rs.get_labels()
+    for label in labels:
+        if label.name == can_close_label:
+            has_can_close_label = True
+    if not has_can_close_label:
+        rs.create_label(
+            name=can_close_label,
+            description="this issue has been marked by automation as closeable",
+            color=random_color()
+        )
+    for image, issue_number in image_issues.items():
+        if cve_memory.get(image, None) is not None:
+            continue
+        current_issue = rs.get_issue(issue_number)
+        current_issue.add_to_labels(can_close_label)
 
 
 run()
