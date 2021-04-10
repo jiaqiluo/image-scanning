@@ -33,15 +33,6 @@ mkdir bin
 curl https://raw.githubusercontent.com/rancher/kontainer-driver-metadata/dev-v2.5/data/data.json -o bin/data.json
 
 HOME=$(pwd)  REPO=rancher TAG=dev go run pkg/image/export/main.go system-charts charts/assets rancher/rancher:v2.5-head rancher/rancher-agent:v2.5-head
-mv rancher-images.txt ../rancher-images-v2.5.txt
+mv rancher-images-sources.txt ../rancher-images-sources-v2.5.txt
 echo "Generated Rancher v2.5 images:"
-cat ../rancher-images-v2.5.txt
-
-## Rancher 2.4 images
-git checkout release/v2.4
-cd system-charts && git checkout dev-v2.4 && cd ..
-
-HOME=$(pwd)  REPO=rancher TAG=dev go run pkg/image/export/main.go system-charts rancher/rancher:v2.4-head rancher/rancher-agent:v2.4-head
-mv rancher-images.txt ../rancher-images-v2.4.txt
-echo "Generated Rancher v2.4 images:"
-cat ../rancher-images-v2.4.txt
+cat ../rancher-images-sources-v2.5.txt
