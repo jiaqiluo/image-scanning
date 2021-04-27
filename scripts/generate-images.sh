@@ -16,13 +16,13 @@ CHART_REPO_DIR=charts
 # Extract the tarballs in charts, copied from rancher
 for TGZ_PATH in $LATEST_TGZ_PATHS; do
   TGZ_REL_PATH=$CHART_REPO_DIR/$TGZ_PATH
+  TGZ_EXTRACT_PATH=$(dirname $CHART_REPO_DIR/${TGZ_PATH##released/})
   if [[ $TGZ_PATH == *crd*.tgz ]]; then
     echo "Skipped CRD: $TGZ_REL_PATH"
   else
-    echo "Extract: $TGZ_REL_PATH"
-    echo $TGZ_REL_PATH
-    echo $(pwd)
-    tar -xvf $TGZ_REL_PATH -C $(dirname $TGZ_REL_PATH)
+    echo "Extract: $TGZ_REL_PATH to $TGZ_EXTRACT_PATH"
+    mkdir -p $TGZ_EXTRACT_PATH
+    tar -xf $TGZ_REL_PATH -C $TGZ_EXTRACT_PATH
   fi
 done
 
