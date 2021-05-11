@@ -24,6 +24,10 @@ the CVE's title, URL, etc.. Every image will posses the "cve-report" label. If t
 Developers that are working on CVEs reported by this project can add notes to each CVE that will be preserved. In the future they will be able to set an issue's state to "ignore" to indicate it is a false-positive
 or something similar. Any ignored CVE's should contain a justification for the state in the "notes" column.
 
+### Checking if an image's CVEs have been resolved
+Download trivy and run `trivy image -s HIGH,CRITICAL <image-name>`. Remove `-s HIGH,CRITICAL` if the CVE is lower in severity. An easy way to download trivy is to use the intall script:
+`curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh -s -- -b $(pwd)`
+
 ### Adding releases
 Steps for any new release that should be scanned must be added to the image scanning workflow: .github/workflows/scan-rancher-images.yaml.
 If a release no longer needs to be scanned, it's steps should be removed from the image scanning workflow.
