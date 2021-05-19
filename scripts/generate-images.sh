@@ -5,9 +5,9 @@ export GO111MODULE=on
 
 function extract_charts() {
   for TGZ_PATH in $1; do
-    TGZ_REL_PATH=$2/$3
-    TGZ_EXTRACT_PATH=$(dirname $2/${3##released/})
-    if [[ $3 == *crd*.tgz ]]; then
+    TGZ_REL_PATH=$2/$TGZ_PATH
+    TGZ_EXTRACT_PATH=$(dirname $2/${TGZ_PATH##released/})
+    if [[ $TGZ_PATH == *crd*.tgz ]]; then
       echo "Skipped CRD: $TGZ_REL_PATH"
     else
       echo "Extract: $TGZ_REL_PATH to $TGZ_EXTRACT_PATH"
@@ -20,16 +20,17 @@ function extract_charts() {
 curl -sLf https://github.com/mikefarah/yq/releases/download/3.2.1/yq_linux_amd64 > yq && chmod +x yq
 
 INDEX_PATH=charts/index.yaml
-LATEST_TGZ_PATHS=$(./yq r $INDEX_PATH "entries.*.[0].urls[0]")
 CHART_REPO_DIR=charts
 
-## Rancher 2.5 images
+## Rancher 2.6 images
 git clone https://github.com/rancher/rancher && cd rancher && git fetch && git checkout origin/master
 git clone https://github.com/rancher/system-charts && cd system-charts && git fetch && git checkout origin/dev-v2.6 && cd ..
 git clone https://github.com/rancher/charts && cd charts && git fetch && git checkout origin/dev-v2.6 && cd ..
 
+LATEST_TGZ_PATHS=$(./../yq r $INDEX_PATH "entries.*.[0].urls[0]")
+
 # Extract the tarballs in charts, copied from rancher
-extract_charts $LATEST_TGZ_PATHS $CHART_REPO_DIR $TGZ_PATH
+extract_charts "$LATEST_TGZ_PATHS" $CHART_REPO_DIR
 
 # Remove index to force building a virtual index like system charts
 rm -f $INDEX_PATH $CHART_REPO_DIR/assets/index.yaml
