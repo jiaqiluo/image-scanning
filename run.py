@@ -171,8 +171,8 @@ def write_cve_csv(writer, images_sources_list, cve_memory, skipped_images, relea
         for source in sources.split(","):
             cve_memory[image].add_source(source)
 
-        vulnerabilities = obj[0]["Vulnerabilities"]
-        base_type = obj[0]["Type"]
+        vulnerabilities = obj[0].get("Vulnerabilities", None)
+        base_type = obj[0].get("Type", "")
         if vulnerabilities is None:
             continue
         for vulnerability in vulnerabilities:
