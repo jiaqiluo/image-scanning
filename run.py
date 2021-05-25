@@ -80,7 +80,7 @@ def run():
         image_issue_number[image_name] = i.number
 
     for image, info in cve_memory.items():
-        vulnerabilities = info.cve_data[0]["Vulnerabilities"]
+        vulnerabilities = info.cve_data[0].get("Vulnerabilities", None)
         body, critical = generate_issue_body(images, vulnerabilities, can_ignore)
 
         current_source_labels = get_current_source_labels(rs)
