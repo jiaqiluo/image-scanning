@@ -38,7 +38,7 @@ rm -f $INDEX_PATH $CHART_REPO_DIR/assets/index.yaml
 mkdir bin
 curl https://raw.githubusercontent.com/rancher/kontainer-driver-metadata/dev-v2.6/data/data.json -o bin/data.json
 
-HOME=$(pwd)  REPO=rancher TAG=dev go run pkg/image/export/main.go system-charts charts/assets rancher/rancher:v2.6-head rancher/rancher-agent:v2.6-head
+HOME=$(pwd)  REPO=rancher TAG=dev go run pkg/image/export/main.go system-charts charts/assets rancher/rancher:master-head rancher/rancher-agent:master-head
 mv rancher-images-sources.txt ../rancher-images-sources-v2.6.txt
 echo "Generated Rancher v2.6 images:"
 cat ../rancher-images-sources-v2.6.txt
