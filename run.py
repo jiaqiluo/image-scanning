@@ -93,9 +93,11 @@ def run():
         if critical:
             all_labels.append(critical_cves_label)
 
+        need_to_wait = False
         # manage CVE issues
         if issue_number is None:
             if body != "":
+                need_to_wait = True
                 # issue for image does not exist, create one
                 print("creating CVE Report issue for " + image)
                 rs.create_issue(title="[CVE Report]: " + image, body=body, labels=all_labels)
@@ -113,12 +115,14 @@ def run():
                 current_issue.set_labels(*all_labels)
                 has_update = True
             if has_update:
+                need_to_wait = True
                 print("updating CVE Report issue for " + image)
                 current_issue.update()
 
         # issue creation faces additional rate limiting that can be hit even if below
         # user limit. It is necessary to wait in between requests.
-        time.sleep(20)
+        if need_to_wait:
+            time.sleep(20)
 
     mark_as_can_close(rs, cve_memory, image_issue_number)
 
