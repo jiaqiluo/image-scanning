@@ -80,7 +80,7 @@ def run():
         image_issue_number[image_name] = i.number
 
     for image, info in cve_memory.items():
-        vulnerabilities = info.cve_data[0].get("Vulnerabilities", None)
+        vulnerabilities = get_all_vulnerabilities(info.cve_data)
         body, critical = generate_issue_body(images, vulnerabilities, can_ignore)
 
         current_source_labels = get_current_source_labels(rs)
@@ -93,9 +93,11 @@ def run():
         if critical:
             all_labels.append(critical_cves_label)
 
+        need_to_wait = False
         # manage CVE issues
         if issue_number is None:
             if body != "":
+                need_to_wait = True
                 # issue for image does not exist, create one
                 print("creating CVE Report issue for " + image)
                 rs.create_issue(title="[CVE Report]: " + image, body=body, labels=all_labels)
@@ -113,14 +115,28 @@ def run():
                 current_issue.set_labels(*all_labels)
                 has_update = True
             if has_update:
+                need_to_wait = True
                 print("updating CVE Report issue for " + image)
                 current_issue.update()
 
         # issue creation faces additional rate limiting that can be hit even if below
         # user limit. It is necessary to wait in between requests.
-        time.sleep(20)
+        if need_to_wait:
+            time.sleep(20)
 
     mark_as_can_close(rs, cve_memory, image_issue_number)
+
+
+def get_all_vulnerabilities(scan_output):
+    vulnerabilities = []
+    for obj in scan_output:
+        obj_vulnerabilities = obj.get("Vulnerabilities", None)
+        if obj_vulnerabilities is None:
+            continue
+        vulnerabilities += obj_vulnerabilities
+    if len(vulnerabilities) == 0:
+        return None
+    return vulnerabilities
 
 
 def parse_image_and_sources(image_and_sources):
@@ -171,7 +187,7 @@ def write_cve_csv(writer, images_sources_list, cve_memory, skipped_images, relea
         for source in sources.split(","):
             cve_memory[image].add_source(source)
 
-        vulnerabilities = obj[0].get("Vulnerabilities", None)
+        vulnerabilities = get_all_vulnerabilities(obj)
         base_type = obj[0].get("Type", "")
         if vulnerabilities is None:
             continue
