@@ -2276,9 +2276,9 @@ rancher/pushprox-proxy:v0.1.0-rancher1-proxy,libcrypto1.1,alpine,CVE-2021-3450,H
 rancher/pushprox-proxy:v0.1.0-rancher1-proxy,libssl1.1,alpine,CVE-2021-23840,HIGH,https://avd.aquasec.com/nvd/cve-2021-23840,1.1.1j-r0,,triaged,
 rancher/pushprox-proxy:v0.1.0-rancher1-proxy,libssl1.1,alpine,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1.1.1k-r0,,triaged,
 rancher/pushprox-proxy:v0.1.0-rancher1-proxy,ssl_client,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.31.1-r20,,triaged,
-rancher/rancher-agent:master-head,github.com/dgrijalva/jwt-go,ubuntu,CVE-2020-26160,HIGH,https://avd.aquasec.com/nvd/cve-2020-26160,v4.0.0-preview1,,triaged,
-rancher/rancher-agent:master-head,golang.org/x/crypto,ubuntu,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
-rancher/rancher-agent:master-head,golang.org/x/crypto,ubuntu,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,triaged,
+rancher/rancher-agent:master-head,github.com/dgrijalva/jwt-go,ubuntu,CVE-2020-26160,HIGH,https://avd.aquasec.com/nvd/cve-2020-26160,v4.0.0-preview1,,waiting,Downstream issue: https://github.com/c-bata/kube-prompt/issues/83
+rancher/rancher-agent:master-head,golang.org/x/crypto,ubuntu,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,waiting,Downstream issue: https://github.com/c-bata/kube-prompt/issues/83
+rancher/rancher-agent:master-head,golang.org/x/crypto,ubuntu,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,waiting,Downstream issue: https://github.com/c-bata/kube-prompt/issues/83
 rancher/rancher-agent:v2.5.7,libssl1.1,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,triaged,
 rancher/rancher-agent:v2.5.7,openssl,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,triaged,
 rancher/rancher-agent:v2.5.7,github.com/dgrijalva/jwt-go,ubuntu,CVE-2020-26160,HIGH,https://avd.aquasec.com/nvd/cve-2020-26160,v4.0.0-preview1,,triaged,
