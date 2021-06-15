@@ -1,7 +1,6 @@
 name: image-scanning
 on:
-  schedule:
-    - cron: '0 0 * * *'
+  push:
 jobs:
   run-scanner:
     runs-on: ubuntu-latest
@@ -22,4 +21,4 @@ jobs:
       - run: python run.py docs/_data/cves-v2.6.csv rancher-images-sources-v2.6.txt v2.6 ${{ secrets.ISSUE_REPO }} ${{ secrets.RANCHERBOT_IMAGE_SCANNING_TOKEN }}
       - run: git config --global user.name "Image Scanning Bot"
       - run: git config --global user.email "githubaction-no-reply@rancher.com"
-      - run: hasUpdate=false && if git status | grep -q "cves-v2.6.csv"; then hasUpdate=true; echo "new cves found" && git add docs/_data/cves-v2.6.csv && git commit -m "Update cves" && git push origin main; fi
+        # - run: hasUpdate=false && if git status | grep -q "cves-v2.6.csv"; then hasUpdate=true; echo "new cves found" && git add docs/_data/cves-v2.6.csv && git commit -m "Update cves" && git push origin main; fi
