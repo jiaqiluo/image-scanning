@@ -1,7 +1,7 @@
 name: image-scanning
 on:
   schedule:
-    - cron: '0 0 * * SUN'
+    - cron: '0 0 * * *'
 jobs:
   run-scanner:
     runs-on: ubuntu-latest
