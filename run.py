@@ -124,7 +124,7 @@ def run():
         if need_to_wait:
             time.sleep(20)
 
-    mark_as_can_close(rs, cve_memory, image_issue_number)
+    close_resolved_issues(rs, cve_memory, image_issue_number)
 
 
 def get_all_vulnerabilities(scan_output):
@@ -292,24 +292,15 @@ def random_color():
     return colors[color_counter]
 
 
-def mark_as_can_close(rs, cve_memory, image_issues):
-    can_close_label = "cve/can-close"
-    has_can_close_label = False
-    labels = rs.get_labels()
-    for label in labels:
-        if label.name == can_close_label:
-            has_can_close_label = True
-    if not has_can_close_label:
-        rs.create_label(
-            name=can_close_label,
-            description="this issue has been marked by automation as closeable",
-            color=random_color()
-        )
+def close_resolved_issues(rs, cve_memory, image_issues):
+    """Closes CVE reports if image is no longer used or all CVEs are resolved"""
     for image, issue_number in image_issues.items():
         if cve_memory.get(image, None) is not None:
             continue
         current_issue = rs.get_issue(issue_number)
-        current_issue.add_to_labels(can_close_label)
+        current_issue.edit(state="closed")
+        current_issue.update()
+        time.sleep(20)
 
 
 run()
