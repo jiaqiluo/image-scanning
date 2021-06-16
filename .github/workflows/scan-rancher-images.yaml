@@ -1,5 +1,6 @@
 name: image-scanning
 on:
+  push:
   schedule:
     - cron: '0 0 * * *'
 jobs:
