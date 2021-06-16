@@ -1,126 +1,72 @@
-import json
-import subprocess
 import csv
+import json
 import os
+import subprocess
 import sys
-import github
-import github.Label
 import time
 
+import github
+import github.Label
+
+from image import Image
+
+# common issue labels
 cve_report_label = "cve-report"
 critical_cves_label = "critical-cves"
 
-disable_issues = True
+# TODO: remove this once it is no longer needed
+disable_issues = False
+
+# used to create labels with a variety of colors
+color_counter = 0
+
 
 def run():
-    if len(sys.argv) != 5:
-        print("Must pass four arguments, images text file name, name of csv file, issue repository, and github token.")
+    if len(sys.argv) != 6:
+        print("Must pass five arguments: images text file names, names of csv files, release names, issue repository,"
+              "and github token.")
         sys.exit(1)
 
     cves_csv_filenames = sys.argv[1].split(",")
     images_text_filenames = sys.argv[2].split(",")
-    repository = sys.argv[3]
-    token = sys.argv[4]
-
-    mirrored_images = {}
-
-    with open('mirrored_list.txt', 'r', newline='') as mirrorfile:
-        for line in mirrorfile:
-            if line == "\n":
-                continue
-            a = line.split(" ")
-            mirrored_image = a[1] + ":" + a[2]
-            mirrored_images[mirrored_image] = True
+    release_names = sys.argv[3].split(",")
+    repository = sys.argv[4]
+    token = sys.argv[5]
 
     can_ignore = {}
     cve_memory = {}
 
     for index, cves_csv_filename in enumerate(cves_csv_filenames):
         images_text_filename = images_text_filenames[index]
+        release = release_names[index]
         with open(os.getcwd() + "/" + images_text_filename) as images_file:
             images = images_file.read()
 
-        images_list = images.split()
-        vulnerabilities = []
+        images_sources_list = images.split("\n")
         skipped_images = []
         image_info = {}
-        # cve_memory = {}
+
+        # get current notes and state of CVES
         with open(cves_csv_filename, 'r', newline='') as csvfile:
             csv_reader = csv.DictReader(csvfile)
-            for line in csv_reader:
-                image = line.get("image")
-                package_name = line.get("package_name")
-                vulnerability_id = line.get("vulnerability_id")
-                key = image + "-" + package_name + "-" + vulnerability_id
-                notes = line.get("notes", "")
-                state = line.get("state", "triage")
-                if state == "ignore":
-                    if can_ignore.get(key, None) is None:
-                        can_ignore[key] = True
-                else:
-                    can_ignore[key] = False
-                image_info[key] = {
-                        "notes": notes,
-                        "state": state,
-                }
+            record_notes_and_state(csv_reader, image_info, can_ignore)
 
+        # write updated CVE info
         with open(cves_csv_filename, 'w', newline='') as csvfile:
-            header = ['image', 'package_name', 'type', 'vulnerability_id', 'severity', 'url', 'patched_version', 'mirrored', 'state', 'notes']
-            writer = csv.DictWriter(csvfile, fieldnames=header)
+            headers = ['image', 'package_name', 'type', 'vulnerability_id', 'severity', 'url', 'patched_version', 'mirrored', 'state', 'notes']
+            writer = csv.DictWriter(csvfile, fieldnames=headers)
 
             writer.writeheader()
-            for image in images_list:
-                if cve_memory.get(image, None) is not None:
-                    obj = cve_memory[image]
-                else:
-                    output = subprocess.getoutput("./trivy image -s HIGH,CRITICAL -f json -t 3m0s -o output.txt " + image)
-                    scan_output = ""
-                    with open("output.txt") as scan_output_file:
-                        scan_output = scan_output_file.read()
-                    if scan_output is None or scan_output == "null" or scan_output == "":
-                        skipped_images.append(image)
-                        continue
-                    obj = json.loads(scan_output)
-                    cve_memory[image] = obj
-                vulnerabilities = obj[0]["Vulnerabilities"]
-                base_type = obj[0]["Type"]
-                # unique_vulnerabilities = {}
-                if vulnerabilities is None:
-                    continue
-                for vulnerability in vulnerabilities:
-                    vulnerability_id = vulnerability["VulnerabilityID"]
-                    package_name = vulnerability['PkgName']
-                    url = vulnerability["PrimaryURL"]
-                    fixed_version = vulnerability.get("FixedVersion", "")
-                    key = image + "-" + package_name + "-" + vulnerability_id
-                    image_notes = image_info.get(key, {})
-                    writer.writerow(
-                            {
-                                'image': image,
-                                'package_name': package_name,
-                                'type': base_type,
-                                'vulnerability_id': vulnerability_id,
-                                'severity': vulnerability['Severity'],
-                                'url': url,
-                                'patched_version': fixed_version,
-                                'state': image_notes.get("state", "triaged"),
-                                'notes': image_notes.get("notes", ""),
-                            })
+            write_cve_csv(writer, images_sources_list, cve_memory, skipped_images, release, image_info)
 
             with open("skipped_images.txt", 'w', newline='') as skipped_output_file:
                 skipped_output_file.write("\n".join(skipped_images))
 
-            with open('mirrored_list.txt', 'r', newline='') as mirrorfile:
-                for line in mirrorfile:
-                    parts = line.split(" ")
-                    if len(parts) < 2:
-                        mirrored_image = parts[0]
-                        continue
-                    mirrored_image = parts[1]
-
+    # TODO: remove this once all issues can be generated
     if disable_issues:
         return
 
+    # create/update issues for images with CVEs
     gh = github.Github(login_or_token=token)
     rs = gh.get_repo(repository)
     image_issue_number = {}
@@ -134,51 +80,163 @@ def run():
         image_issue_number[image_name] = i.number
 
     for image, info in cve_memory.items():
-        body = "|Vulnerability ID|Title|Package Name|Fixed Version|Severity|URL|\n|---|---|---|---|---|---|"
-        vulnerabilities = info[0]["Vulnerabilities"]
-        critical = False
-        if vulnerabilities is None:
-            print(image + " has no vulnerabilities")
-            continue
-        for vulnerability in info[0]["Vulnerabilities"]:
-            vulnerability_id = vulnerability["VulnerabilityID"]
-            package_name = vulnerability['PkgName']
-            title = vulnerability.get("Title", "")
-            primary_url = vulnerability.get("PrimaryURL", "")
-            key = image + "-" + package_name + "-" + vulnerability_id
-            if can_ignore.get(key, False):
-                continue
-            fixed_version = vulnerability.get("FixedVersion", "")
-            severity = vulnerability.get("Severity", "")
-            if severity == "CRITICAL":
-                critical = True
-            body = body + "\n|" + vulnerability_id + "|" + title + "|" + package_name + "|" + fixed_version + "|" + \
-                severity + "|" + primary_url + "|"
+        vulnerabilities = get_all_vulnerabilities(info.cve_data)
+        body, critical = generate_issue_body(images, vulnerabilities, can_ignore)
+
+        current_source_labels = get_current_source_labels(rs)
         issue_number = image_issue_number.get(image, None)
+
+        # build list of issue labels
+        source_labels = generate_source_labels(rs, current_source_labels, info.sources)
+        release_labels = generate_release_labels(rs, current_source_labels, info.releases)
+        all_labels = [cve_report_label] + source_labels + release_labels
+        if critical:
+            all_labels.append(critical_cves_label)
+
+        need_to_wait = False
+        # manage CVE issues
         if issue_number is None:
-            labels = [cve_report_label]
-            if critical:
-                labels.append(critical_cves_label)
-            print("creating CVE Report issue for " + image)
-            rs.create_issue(title="[CVE Report]: " + image, body=body, labels=labels)
+            if body != "":
+                need_to_wait = True
+                # issue for image does not exist, create one
+                print("creating CVE Report issue for " + image)
+                rs.create_issue(title="[CVE Report]: " + image, body=body, labels=all_labels)
         else:
+            # issue already exists, update current issue
             current_issue = rs.get_issue(issue_number)
             has_update = False
             if current_issue.body != body:
-                current_issue.edit(body=body)
-                has_update = True
-            if has_critical_cve_label(current_issue.labels) != critical:
-                if critical:
-                    current_issue.add_to_labels(critical_cves_label)
+                if body == "":
+                    current_issue.edit(state="closed")
                 else:
-                    current_issue.remove_from_labels(critical_cves_label)
+                    current_issue.edit(body=body)
+                has_update = True
+            if set(map(lambda x: x.name, current_issue.get_labels())) != set(all_labels):
+                current_issue.set_labels(*all_labels)
                 has_update = True
             if has_update:
+                need_to_wait = True
                 print("updating CVE Report issue for " + image)
                 current_issue.update()
+
         # issue creation faces additional rate limiting that can be hit even if below
         # user limit. It is necessary to wait in between requests.
-        time.sleep(20)
+        if need_to_wait:
+            time.sleep(20)
+
+    close_resolved_issues(rs, cve_memory, image_issue_number)
+
+
+def get_all_vulnerabilities(scan_output):
+    vulnerabilities = []
+    for obj in scan_output:
+        obj_vulnerabilities = obj.get("Vulnerabilities", None)
+        if obj_vulnerabilities is None:
+            continue
+        vulnerabilities += obj_vulnerabilities
+    if len(vulnerabilities) == 0:
+        return None
+    return vulnerabilities
+
+
+def parse_image_and_sources(image_and_sources):
+    parts = image_and_sources.split()
+    if len(parts) == 1:
+        return parts[0], ""
+    return parts[0], parts[1]
+
+
+def record_notes_and_state(csv_reader, image_info, can_ignore):
+    for line in csv_reader:
+        image = line.get("image")
+        package_name = line.get("package_name")
+        vulnerability_id = line.get("vulnerability_id")
+        key = image + "-" + package_name + "-" + vulnerability_id
+        notes = line.get("notes", "")
+        state = line.get("state", "triage")
+        if state == "ignore":
+            if can_ignore.get(key, None) is None:
+                can_ignore[key] = True
+        else:
+            can_ignore[key] = False
+        image_info[key] = {
+            "notes": notes,
+            "state": state,
+        }
+
+
+def write_cve_csv(writer, images_sources_list, cve_memory, skipped_images, release, image_info):
+    for image_and_sources in images_sources_list:
+        if image_and_sources == "":
+            continue
+        image, sources = parse_image_and_sources(image_and_sources)
+        if cve_memory.get(image, None) is not None:
+            cve_memory[image].add_release(release)
+            obj = cve_memory[image].cve_data
+        else:
+            # TODO: check for errors returned by trivy and properly update skipped images based on result
+            output = subprocess.getoutput("./trivy image -s HIGH,CRITICAL -f json -t 3m0s -o output.txt " + image)
+            with open("output.txt") as scan_output_file:
+                scan_output = scan_output_file.read()
+            if scan_output is None or scan_output == "null" or scan_output == "":
+                skipped_images.append(image)
+                continue
+            obj = json.loads(scan_output)
+            cve_memory[image] = Image(release, obj)
+
+        for source in sources.split(","):
+            cve_memory[image].add_source(source)
+
+        vulnerabilities = get_all_vulnerabilities(obj)
+        base_type = obj[0].get("Type", "")
+        if vulnerabilities is None:
+            continue
+        for vulnerability in vulnerabilities:
+            write_cve(writer, vulnerability, image, image_info, base_type)
+
+
+def write_cve(writer, vulnerability, image, image_info, base_type):
+    vulnerability_id = vulnerability["VulnerabilityID"]
+    package_name = vulnerability['PkgName']
+    url = vulnerability["PrimaryURL"]
+    fixed_version = vulnerability.get("FixedVersion", "")
+    key = image + "-" + package_name + "-" + vulnerability_id
+    image_notes = image_info.get(key, {})
+    writer.writerow(
+        {
+            'image': image,
+            'package_name': package_name,
+            'type': base_type,
+            'vulnerability_id': vulnerability_id,
+            'severity': vulnerability['Severity'],
+            'url': url,
+            'patched_version': fixed_version,
+            'state': image_notes.get("state", "triaged"),
+            'notes': image_notes.get("notes", ""),
+        })
+
+
+def generate_issue_body(image, vulnerabilities, can_ignore):
+    if vulnerabilities is None or len(vulnerabilities) == 0:
+        return "", False
+
+    body = "|Vulnerability ID|Title|Package Name|Fixed Version|Severity|URL|\n|---|---|---|---|---|---|"
+    critical = False
+    for vulnerability in vulnerabilities:
+        vulnerability_id = vulnerability["VulnerabilityID"]
+        package_name = vulnerability['PkgName']
+        title = vulnerability.get("Title", "")
+        primary_url = vulnerability.get("PrimaryURL", "")
+        key = image + "-" + package_name + "-" + vulnerability_id
+        if can_ignore.get(key, False):
+            continue
+        fixed_version = vulnerability.get("FixedVersion", "")
+        severity = vulnerability.get("Severity", "")
+        if severity == "CRITICAL":
+            critical = True
+        body = body + "\n|" + vulnerability_id + "|" + title + "|" + package_name + "|" + fixed_version + "|" + \
+            severity + "|" + primary_url + "|"
+    return body, critical
 
 
 def has_critical_cve_label(gh_labels):
@@ -186,6 +244,63 @@ def has_critical_cve_label(gh_labels):
         if label.name == critical_cves_label:
             return True
     return False
+
+
+def get_current_source_labels(rs):
+    source_labels = {}
+    labels = rs.get_labels()
+
+    for label in labels:
+        if label.name.startswith("cve/"):
+            source_labels[label.name] = True
+    return source_labels
+
+
+def create_missing_labels(rs, current_labels, check_labels):
+    for label in check_labels:
+        if current_labels.get(label, None):
+            continue
+        rs.create_label(
+            name=label,
+            description="automatically created label indicating where image is used",
+            color=random_color()
+        )
+
+
+def generate_source_labels(rs, current_labels, sources):
+    labels = []
+    for source, hasSource in sources.items():
+        if not hasSource:
+            continue
+        labels.append("cve/" + source.split(":")[0])
+    create_missing_labels(rs, current_labels, labels)
+    return labels
+
+
+def generate_release_labels(rs, current_labels, releases):
+    labels = []
+    for release in releases:
+        labels.append("cve/" + release)
+    create_missing_labels(rs, current_labels, labels)
+    return labels
+
+
+def random_color():
+    global color_counter
+    colors = ("4287f5", "3ef08e", "ae35f0", "a4a1c2", "ffb300", "ff00cc")
+    color_counter = (color_counter + 1) % len(colors)
+    return colors[color_counter]
+
+
+def close_resolved_issues(rs, cve_memory, image_issues):
+    """Closes CVE reports if image is no longer used or all CVEs are resolved"""
+    for image, issue_number in image_issues.items():
+        if cve_memory.get(image, None) is not None:
+            continue
+        current_issue = rs.get_issue(issue_number)
+        current_issue.edit(state="closed")
+        current_issue.update()
+        time.sleep(20)
 
 
 run()
