@@ -1,4 +1,4 @@
-﻿image,package_name,type,vulnerability_id,severity,url,patched_version,mirrored,state,notes
+image,package_name,type,vulnerability_id,severity,url,patched_version,mirrored,state,notes
 rancher/aks-operator:v1.0.1-rc7,glib2,redhat,CVE-2021-27219,HIGH,https://avd.aquasec.com/nvd/cve-2021-27219,2.56.4-10.el8_4,,triaged,
 rancher/aks-operator:v1.0.1-rc7,glibc,redhat,CVE-2019-1010022,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-1010022,,,triaged,
 rancher/aks-operator:v1.0.1-rc7,glibc-common,redhat,CVE-2019-1010022,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-1010022,,,triaged,
