@@ -1070,21 +1070,21 @@ rancher/mirrored-grafana-grafana-image-renderer:2.0.1,libcrypto1.1,alpine,CVE-20
 rancher/mirrored-grafana-grafana-image-renderer:2.0.1,libcrypto1.1,alpine,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1.1.1k-r0,,triaged,
 rancher/mirrored-grafana-grafana-image-renderer:2.0.1,libssl1.1,alpine,CVE-2021-23840,HIGH,https://avd.aquasec.com/nvd/cve-2021-23840,1.1.1j-r0,,triaged,
 rancher/mirrored-grafana-grafana-image-renderer:2.0.1,libssl1.1,alpine,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1.1.1k-r0,,triaged,
-rancher/mirrored-grafana-grafana:6.7.4,apk-tools,alpine,CVE-2021-30139,HIGH,https://avd.aquasec.com/nvd/cve-2021-30139,2.10.6-r0,,triaged,
-rancher/mirrored-grafana-grafana:6.7.4,busybox,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.30.1-r5,,triaged,
-rancher/mirrored-grafana-grafana:6.7.4,krb5-libs,alpine,CVE-2020-28196,HIGH,https://avd.aquasec.com/nvd/cve-2020-28196,1.17.2-r0,,triaged,
-rancher/mirrored-grafana-grafana:6.7.4,libcrypto1.1,alpine,CVE-2021-23840,HIGH,https://avd.aquasec.com/nvd/cve-2021-23840,1.1.1j-r0,,triaged,
-rancher/mirrored-grafana-grafana:6.7.4,libcrypto1.1,alpine,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1.1.1k-r0,,triaged,
-rancher/mirrored-grafana-grafana:6.7.4,libssl1.1,alpine,CVE-2021-23840,HIGH,https://avd.aquasec.com/nvd/cve-2021-23840,1.1.1j-r0,,triaged,
-rancher/mirrored-grafana-grafana:6.7.4,libssl1.1,alpine,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1.1.1k-r0,,triaged,
-rancher/mirrored-grafana-grafana:6.7.4,openssl,alpine,CVE-2021-23840,HIGH,https://avd.aquasec.com/nvd/cve-2021-23840,1.1.1j-r0,,triaged,
-rancher/mirrored-grafana-grafana:6.7.4,openssl,alpine,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1.1.1k-r0,,triaged,
-rancher/mirrored-grafana-grafana:6.7.4,ssl_client,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.30.1-r5,,triaged,
-rancher/mirrored-grafana-grafana:6.7.4,golang.org/x/crypto,alpine,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
-rancher/mirrored-grafana-grafana:6.7.4,golang.org/x/crypto,alpine,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,triaged,
-rancher/mirrored-grafana-grafana:6.7.4,github.com/crewjam/saml,alpine,CVE-2020-27846,CRITICAL,https://avd.aquasec.com/nvd/cve-2020-27846,v0.4.3,,triaged,
-rancher/mirrored-grafana-grafana:6.7.4,golang.org/x/crypto,alpine,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
-rancher/mirrored-grafana-grafana:6.7.4,golang.org/x/crypto,alpine,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,triaged,
+rancher/mirrored-grafana-grafana:6.7.4,apk-tools,alpine,CVE-2021-30139,HIGH,https://avd.aquasec.com/nvd/cve-2021-30139,2.10.6-r0,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-grafana-grafana:6.7.4,busybox,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.30.1-r5,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-grafana-grafana:6.7.4,krb5-libs,alpine,CVE-2020-28196,HIGH,https://avd.aquasec.com/nvd/cve-2020-28196,1.17.2-r0,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-grafana-grafana:6.7.4,libcrypto1.1,alpine,CVE-2021-23840,HIGH,https://avd.aquasec.com/nvd/cve-2021-23840,1.1.1j-r0,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-grafana-grafana:6.7.4,libcrypto1.1,alpine,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1.1.1k-r0,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-grafana-grafana:6.7.4,libssl1.1,alpine,CVE-2021-23840,HIGH,https://avd.aquasec.com/nvd/cve-2021-23840,1.1.1j-r0,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-grafana-grafana:6.7.4,libssl1.1,alpine,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1.1.1k-r0,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-grafana-grafana:6.7.4,openssl,alpine,CVE-2021-23840,HIGH,https://avd.aquasec.com/nvd/cve-2021-23840,1.1.1j-r0,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-grafana-grafana:6.7.4,openssl,alpine,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1.1.1k-r0,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-grafana-grafana:6.7.4,ssl_client,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.30.1-r5,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-grafana-grafana:6.7.4,golang.org/x/crypto,alpine,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-grafana-grafana:6.7.4,golang.org/x/crypto,alpine,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-grafana-grafana:6.7.4,github.com/crewjam/saml,alpine,CVE-2020-27846,CRITICAL,https://avd.aquasec.com/nvd/cve-2020-27846,v0.4.3,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-grafana-grafana:6.7.4,golang.org/x/crypto,alpine,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-grafana-grafana:6.7.4,golang.org/x/crypto,alpine,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-grafana-grafana:7.1.5,apk-tools,alpine,CVE-2021-30139,HIGH,https://avd.aquasec.com/nvd/cve-2021-30139,2.10.6-r0,,triaged,
 rancher/mirrored-grafana-grafana:7.1.5,busybox,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.31.1-r20,,triaged,
 rancher/mirrored-grafana-grafana:7.1.5,krb5-libs,alpine,CVE-2020-28196,HIGH,https://avd.aquasec.com/nvd/cve-2020-28196,1.18.3-r0,,triaged,
