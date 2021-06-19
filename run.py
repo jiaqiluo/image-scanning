@@ -220,8 +220,10 @@ def generate_issue_body(image, vulnerabilities, can_ignore):
     if vulnerabilities is None or len(vulnerabilities) == 0:
         return "", False
 
-    body = "|Vulnerability ID|Title|Package Name|Fixed Version|Severity|URL|\n|---|---|---|---|---|---|"
+    header = "|Vulnerability ID|Title|Package Name|Fixed Version|Severity|URL|\n|---|---|---|---|---|---|"
+    body = ""
     critical = False
+
     for vulnerability in vulnerabilities:
         vulnerability_id = vulnerability["VulnerabilityID"]
         package_name = vulnerability['PkgName']
@@ -236,7 +238,9 @@ def generate_issue_body(image, vulnerabilities, can_ignore):
             critical = True
         body = body + "\n|" + vulnerability_id + "|" + title + "|" + package_name + "|" + fixed_version + "|" + \
             severity + "|" + primary_url + "|"
-    return body, critical
+    if body == "":
+        return "", critical
+    return header + body, critical
 
 
 def has_critical_cve_label(gh_labels):
