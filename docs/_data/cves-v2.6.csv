@@ -1953,6 +1953,8 @@ rancher/mirrored-longhornio-csi-resizer:v0.5.1-lh1,golang.org/x/crypto,debian,CV
 rancher/mirrored-longhornio-csi-resizer:v0.5.1-lh1,golang.org/x/crypto,debian,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,triaged,
 rancher/mirrored-longhornio-csi-snapshotter:v2.1.1-lh1,golang.org/x/crypto,debian,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
 rancher/mirrored-longhornio-csi-snapshotter:v2.1.1-lh1,golang.org/x/crypto,debian,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,triaged,
+rancher/mirrored-longhornio-longhorn-engine:v1.1.1,github.com/satori/go.uuid,ubuntu,CVE-2021-3538,CRITICAL,https://avd.aquasec.com/nvd/cve-2021-3538,v1.2.0,,triaged,
+rancher/mirrored-longhornio-longhorn-engine:v1.1.1,github.com/satori/go.uuid,ubuntu,CVE-2021-3538,CRITICAL,https://avd.aquasec.com/nvd/cve-2021-3538,v1.2.0,,triaged,
 rancher/mirrored-longhornio-longhorn-ui:v1.1.1,curl,alpine,CVE-2021-22901,HIGH,https://avd.aquasec.com/nvd/cve-2021-22901,7.77.0-r0,,triaged,
 rancher/mirrored-longhornio-longhorn-ui:v1.1.1,libgcrypt,alpine,CVE-2021-33560,HIGH,https://avd.aquasec.com/nvd/cve-2021-33560,1.8.8-r0,,triaged,
 rancher/mirrored-longhornio-longhorn-ui:v1.1.1,libxml2,alpine,CVE-2021-3517,HIGH,https://avd.aquasec.com/nvd/cve-2021-3517,2.9.10-r7,,triaged,
