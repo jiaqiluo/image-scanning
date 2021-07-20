@@ -265,18 +265,18 @@ rancher/klipper-helm:v0.4.3,libssl1.1,alpine,CVE-2021-3450,HIGH,https://avd.aqua
 rancher/klipper-helm:v0.4.3,ssl_client,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.31.1-r20,,triaged,
 rancher/klipper-helm:v0.4.3,github.com/deislabs/oras,alpine,CVE-2021-21272,HIGH,https://avd.aquasec.com/nvd/cve-2021-21272,v0.9.0,,triaged,
 rancher/klipper-helm:v0.4.3,github.com/dgrijalva/jwt-go,alpine,CVE-2020-26160,HIGH,https://avd.aquasec.com/nvd/cve-2020-26160,,,triaged,
-rancher/klipper-helm:v0.4.3,github.com/docker/distribution,alpine,CVE-2017-11468,HIGH,https://avd.aquasec.com/nvd/cve-2017-11468,v2.7.0-rc.0+incompatible,,triaged,
+rancher/klipper-helm:v0.4.3,github.com/docker/distribution,alpine,CVE-2017-11468,HIGH,https://avd.aquasec.com/nvd/cve-2017-11468,v2.7.0-rc.0+incompatible,,waiting,Upstream issue: https://github.com/helm/helm/issues/9956
 rancher/klipper-helm:v0.4.3,github.com/evanphx/json-patch,alpine,CVE-2018-14632,HIGH,https://avd.aquasec.com/nvd/cve-2018-14632,v0.5.2,,triaged,
 rancher/klipper-helm:v0.4.3,github.com/gogo/protobuf,alpine,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
-rancher/klipper-helm:v0.4.3,github.com/opencontainers/runc,alpine,CVE-2019-16884,HIGH,https://avd.aquasec.com/nvd/cve-2019-16884,v1.0.0-rc8.0.20190930145003-cad42f6e0932,,triaged,
-rancher/klipper-helm:v0.4.3,github.com/opencontainers/runc,alpine,CVE-2019-19921,HIGH,https://avd.aquasec.com/nvd/cve-2019-19921,v1.0.0-rc9.0.20200122160610-2fc03cc11c77,,triaged,
+rancher/klipper-helm:v0.4.3,github.com/opencontainers/runc,alpine,CVE-2019-16884,HIGH,https://avd.aquasec.com/nvd/cve-2019-16884,v1.0.0-rc8.0.20190930145003-cad42f6e0932,,waiting,Upstream issue: https://github.com/helm/helm/issues/9956
+rancher/klipper-helm:v0.4.3,github.com/opencontainers/runc,alpine,CVE-2019-19921,HIGH,https://avd.aquasec.com/nvd/cve-2019-19921,v1.0.0-rc9.0.20200122160610-2fc03cc11c77,,waiting,Upstream issue: https://github.com/helm/helm/issues/9956
 rancher/klipper-helm:v0.4.3,golang.org/x/crypto,alpine,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
-rancher/klipper-helm:v0.6.1-build20210616,github.com/opencontainers/runc,alpine,CVE-2019-16884,HIGH,https://avd.aquasec.com/nvd/cve-2019-16884,v1.0.0-rc8.0.20190930145003-cad42f6e0932,,triaged,
-rancher/klipper-helm:v0.6.1-build20210616,github.com/opencontainers/runc,alpine,CVE-2019-19921,HIGH,https://avd.aquasec.com/nvd/cve-2019-19921,v1.0.0-rc9.0.20200122160610-2fc03cc11c77,,triaged,
-rancher/klipper-helm:v0.6.1-build20210616,github.com/docker/distribution,alpine,CVE-2017-11468,HIGH,https://avd.aquasec.com/nvd/cve-2017-11468,v2.7.0-rc.0+incompatible,,triaged,
-rancher/klipper-helm:v0.6.1-build20210616,github.com/gogo/protobuf,alpine,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
-rancher/klipper-helm:v0.6.1-build20210616,github.com/opencontainers/runc,alpine,CVE-2019-16884,HIGH,https://avd.aquasec.com/nvd/cve-2019-16884,v1.0.0-rc8.0.20190930145003-cad42f6e0932,,triaged,
-rancher/klipper-helm:v0.6.1-build20210616,github.com/opencontainers/runc,alpine,CVE-2019-19921,HIGH,https://avd.aquasec.com/nvd/cve-2019-19921,v1.0.0-rc9.0.20200122160610-2fc03cc11c77,,triaged,
+rancher/klipper-helm:v0.6.1-build20210616,github.com/opencontainers/runc,alpine,CVE-2019-16884,HIGH,https://avd.aquasec.com/nvd/cve-2019-16884,v1.0.0-rc8.0.20190930145003-cad42f6e0932,,waiting,Upstream issue: https://github.com/helm/helm/issues/9956
+rancher/klipper-helm:v0.6.1-build20210616,github.com/opencontainers/runc,alpine,CVE-2019-19921,HIGH,https://avd.aquasec.com/nvd/cve-2019-19921,v1.0.0-rc9.0.20200122160610-2fc03cc11c77,,waiting,Upstream issue: https://github.com/helm/helm/issues/9956
+rancher/klipper-helm:v0.6.1-build20210616,github.com/docker/distribution,alpine,CVE-2017-11468,HIGH,https://avd.aquasec.com/nvd/cve-2017-11468,v2.7.0-rc.0+incompatible,,waiting,Upstream issue: https://github.com/helm/helm/issues/9956
+rancher/klipper-helm:v0.6.1-build20210616,github.com/gogo/protobuf,alpine,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,waiting,Upstream issue: https://github.com/helm/helm/issues/9956
+rancher/klipper-helm:v0.6.1-build20210616,github.com/opencontainers/runc,alpine,CVE-2019-16884,HIGH,https://avd.aquasec.com/nvd/cve-2019-16884,v1.0.0-rc8.0.20190930145003-cad42f6e0932,,waiting,Upstream issue: https://github.com/helm/helm/issues/9956
+rancher/klipper-helm:v0.6.1-build20210616,github.com/opencontainers/runc,alpine,CVE-2019-19921,HIGH,https://avd.aquasec.com/nvd/cve-2019-19921,v1.0.0-rc9.0.20200122160610-2fc03cc11c77,,waiting,Upstream issue: https://github.com/helm/helm/issues/9956
 rancher/klipper-lb:v0.1.2,musl,alpine,CVE-2019-14697,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-14697,1.1.19-r11,,triaged,
 rancher/klipper-lb:v0.1.2,musl-utils,alpine,CVE-2019-14697,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-14697,1.1.19-r11,,triaged,
 rancher/library-traefik:2.4.8,github.com/gogo/protobuf,alpine,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
