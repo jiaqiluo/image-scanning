@@ -164,6 +164,15 @@ rancher/hardened-sriov-network-webhook:v1.0.0-build20210429,glib2,redhat,CVE-202
 rancher/hardened-sriov-network-webhook:v1.0.0-build20210429,glibc,redhat,CVE-2019-1010022,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-1010022,,,triaged,
 rancher/hardened-sriov-network-webhook:v1.0.0-build20210429,glibc-common,redhat,CVE-2019-1010022,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-1010022,,,triaged,
 rancher/hardened-sriov-network-webhook:v1.0.0-build20210429,sqlite,redhat,CVE-2019-5827,HIGH,https://avd.aquasec.com/nvd/cve-2019-5827,,,triaged,
+rancher/hyperkube:v1.19.12-rancher1,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,245.4-4ubuntu3.10,,triaged,
+rancher/hyperkube:v1.19.12-rancher1,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,245.4-4ubuntu3.10,,triaged,
+rancher/hyperkube:v1.19.12-rancher1,udev,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,245.4-4ubuntu3.10,,triaged,
+rancher/hyperkube:v1.20.8-rancher1,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,245.4-4ubuntu3.10,,triaged,
+rancher/hyperkube:v1.20.8-rancher1,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,245.4-4ubuntu3.10,,triaged,
+rancher/hyperkube:v1.20.8-rancher1,udev,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,245.4-4ubuntu3.10,,triaged,
+rancher/hyperkube:v1.21.1-rancher2,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,245.4-4ubuntu3.10,,triaged,
+rancher/hyperkube:v1.21.1-rancher2,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,245.4-4ubuntu3.10,,triaged,
+rancher/hyperkube:v1.21.1-rancher2,udev,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,245.4-4ubuntu3.10,,triaged,
 rancher/istio-1.5-migration:0.1.1,apk-tools,alpine,CVE-2021-30139,HIGH,https://avd.aquasec.com/nvd/cve-2021-30139,2.10.6-r0,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/istio-1.5-migration:0.1.1,busybox,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.31.1-r20,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/istio-1.5-migration:0.1.1,curl,alpine,CVE-2020-8169,HIGH,https://avd.aquasec.com/nvd/cve-2020-8169,7.69.1-r1,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
@@ -187,6 +196,8 @@ rancher/istio-installer:1.10.2-rancher1,github.com/docker/distribution,alpine,CV
 rancher/istio-installer:1.10.2-rancher1,github.com/ulikunitz/xz,alpine,CVE-2021-29482,HIGH,https://avd.aquasec.com/nvd/cve-2021-29482,v0.5.8,,triaged,
 rancher/istio-kubectl:1.4.6,libssl1.1,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,triaged,
 rancher/istio-kubectl:1.4.6,libssl1.1,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,triaged,
+rancher/istio-kubectl:1.4.6,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/istio-kubectl:1.4.6,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-11884,HIGH,https://avd.aquasec.com/nvd/cve-2020-11884,4.15.0-99.100,,triaged,
 rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-12351,HIGH,https://avd.aquasec.com/nvd/cve-2020-12351,4.15.0-122.124,,triaged,
 rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-12654,HIGH,https://avd.aquasec.com/nvd/cve-2020-12654,4.15.0-96.97,,triaged,
@@ -274,6 +285,8 @@ rancher/local-path-provisioner:v0.0.19,libcrypto1.1,alpine,CVE-2021-3450,HIGH,ht
 rancher/local-path-provisioner:v0.0.19,libssl1.1,alpine,CVE-2021-23840,HIGH,https://avd.aquasec.com/nvd/cve-2021-23840,1.1.1j-r0,,triaged,
 rancher/local-path-provisioner:v0.0.19,libssl1.1,alpine,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1.1.1k-r0,,triaged,
 rancher/local-path-provisioner:v0.0.19,ssl_client,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.31.1-r20,,triaged,
+rancher/log-aggregator:v0.1.7,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/log-aggregator:v0.1.7,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/mirrored-banzaicloud-fluentd:v1.12.4-alpine-1,rake,alpine,CVE-2020-8130,HIGH,https://avd.aquasec.com/nvd/cve-2020-8130,12.3.3,,triaged,
 rancher/mirrored-banzaicloud-fluentd:v1.12.4-alpine-1,addressable,alpine,CVE-2021-32740,HIGH,https://avd.aquasec.com/nvd/cve-2021-32740,2.8.0,,triaged,
 rancher/mirrored-banzaicloud-fluentd:v1.12.4-alpine-1,rexml,alpine,CVE-2021-28965,HIGH,https://avd.aquasec.com/nvd/cve-2021-28965,3.2.5,,triaged,
@@ -356,6 +369,8 @@ rancher/mirrored-calico-node:v3.16.5,glibc-minimal-langpack,redhat,CVE-2019-1010
 rancher/mirrored-calico-node:v3.16.5,openssl-libs,redhat,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1:1.1.1g-12.el8_3,,triaged,
 rancher/mirrored-calico-node:v3.16.5,openssl-libs,redhat,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1:1.1.1g-15.el8_3,,triaged,
 rancher/mirrored-calico-node:v3.16.5,openssl-libs,redhat,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1:1.1.1g-15.el8_3,,triaged,
+rancher/mirrored-calico-node:v3.16.5,systemd-libs,redhat,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,,,triaged,
+rancher/mirrored-calico-node:v3.16.5,systemd-pam,redhat,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,,,triaged,
 rancher/mirrored-calico-node:v3.16.5,github.com/dgrijalva/jwt-go,redhat,CVE-2020-26160,HIGH,https://avd.aquasec.com/nvd/cve-2020-26160,,,triaged,
 rancher/mirrored-calico-node:v3.16.5,github.com/gogo/protobuf,redhat,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
 rancher/mirrored-calico-node:v3.16.5,golang.org/x/crypto,redhat,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
@@ -366,6 +381,8 @@ rancher/mirrored-calico-node:v3.17.2,glibc-langpack-en,redhat,CVE-2019-1010022,C
 rancher/mirrored-calico-node:v3.17.2,glibc-minimal-langpack,redhat,CVE-2019-1010022,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-1010022,,,triaged,
 rancher/mirrored-calico-node:v3.17.2,openssl-libs,redhat,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1:1.1.1g-15.el8_3,,triaged,
 rancher/mirrored-calico-node:v3.17.2,openssl-libs,redhat,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1:1.1.1g-15.el8_3,,triaged,
+rancher/mirrored-calico-node:v3.17.2,systemd-libs,redhat,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,,,triaged,
+rancher/mirrored-calico-node:v3.17.2,systemd-pam,redhat,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,,,triaged,
 rancher/mirrored-calico-node:v3.17.2,github.com/dgrijalva/jwt-go,redhat,CVE-2020-26160,HIGH,https://avd.aquasec.com/nvd/cve-2020-26160,,,triaged,
 rancher/mirrored-calico-node:v3.17.2,github.com/gogo/protobuf,redhat,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
 rancher/mirrored-calico-node:v3.17.2,golang.org/x/crypto,redhat,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
@@ -374,8 +391,12 @@ rancher/mirrored-calico-node:v3.19.1,glibc,redhat,CVE-2019-1010022,CRITICAL,http
 rancher/mirrored-calico-node:v3.19.1,glibc-common,redhat,CVE-2019-1010022,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-1010022,,,triaged,
 rancher/mirrored-calico-node:v3.19.1,glibc-langpack-en,redhat,CVE-2019-1010022,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-1010022,,,triaged,
 rancher/mirrored-calico-node:v3.19.1,glibc-minimal-langpack,redhat,CVE-2019-1010022,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-1010022,,,triaged,
+rancher/mirrored-calico-node:v3.19.1,systemd-libs,redhat,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,,,triaged,
+rancher/mirrored-calico-node:v3.19.1,systemd-pam,redhat,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,,,triaged,
 rancher/mirrored-calico-operator:v1.17.4,github.com/gogo/protobuf,gobinary,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
 rancher/mirrored-calico-operator:v1.17.4,golang.org/x/crypto,gobinary,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
+rancher/mirrored-cilium-cilium:v1.9.8,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,245.4-4ubuntu3.10,,triaged,
+rancher/mirrored-cilium-cilium:v1.9.8,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,245.4-4ubuntu3.10,,triaged,
 rancher/mirrored-cloud-provider-vsphere-csi-release-driver:v2.1.0,curl,photon,CVE-2021-22901,HIGH,https://avd.aquasec.com/nvd/cve-2021-22901,7.75.0-2.ph3,,triaged,
 rancher/mirrored-cloud-provider-vsphere-csi-release-driver:v2.1.0,curl-libs,photon,CVE-2021-22901,HIGH,https://avd.aquasec.com/nvd/cve-2021-22901,7.75.0-2.ph3,,triaged,
 rancher/mirrored-cloud-provider-vsphere-csi-release-driver:v2.1.0,glib,photon,CVE-2020-35457,HIGH,https://avd.aquasec.com/nvd/cve-2020-35457,2.58.0-5.ph3,,triaged,
@@ -553,6 +574,8 @@ rancher/mirrored-grafana-grafana:6.7.4,golang.org/x/crypto,alpine,CVE-2020-29652
 rancher/mirrored-grafana-grafana:6.7.4,golang.org/x/crypto,alpine,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-citadel:1.5.9,libssl1.1,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-citadel:1.5.9,libssl1.1,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-istio-citadel:1.5.9,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-istio-citadel:1.5.9,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/mirrored-istio-citadel:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-12351,HIGH,https://avd.aquasec.com/nvd/cve-2020-12351,4.15.0-122.124,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-citadel:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-14386,HIGH,https://avd.aquasec.com/nvd/cve-2020-14386,4.15.0-117.118,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-citadel:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-16119,HIGH,https://avd.aquasec.com/nvd/cve-2020-16119,4.15.0-121.123,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
@@ -631,6 +654,8 @@ rancher/mirrored-istio-coredns-plugin:0.2-istio-1.1,openssl,ubuntu,CVE-2016-6304
 rancher/mirrored-istio-coredns-plugin:0.2-istio-1.1,sudo,ubuntu,CVE-2017-1000367,HIGH,https://avd.aquasec.com/nvd/cve-2017-1000367,1.8.9p5-1ubuntu1.4,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-galley:1.5.9,libssl1.1,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-galley:1.5.9,libssl1.1,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-istio-galley:1.5.9,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-istio-galley:1.5.9,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/mirrored-istio-galley:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-12351,HIGH,https://avd.aquasec.com/nvd/cve-2020-12351,4.15.0-122.124,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-galley:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-14386,HIGH,https://avd.aquasec.com/nvd/cve-2020-14386,4.15.0-117.118,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-galley:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-16119,HIGH,https://avd.aquasec.com/nvd/cve-2020-16119,4.15.0-121.123,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
@@ -670,6 +695,8 @@ rancher/mirrored-istio-galley:1.5.9,sudo,ubuntu,CVE-2021-3156,HIGH,https://avd.a
 rancher/mirrored-istio-galley:1.5.9,github.com/gogo/protobuf,ubuntu,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-galley:1.5.9,golang.org/x/crypto,ubuntu,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-galley:1.5.9,golang.org/x/crypto,ubuntu,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-istio-install-cni:1.10.2,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-istio-install-cni:1.10.2,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/mirrored-istio-install-cni:1.10.2,linux-tools-4.15.0-144,ubuntu,CVE-2021-3600,HIGH,https://avd.aquasec.com/nvd/cve-2021-3600,4.15.0-147.151,,triaged,
 rancher/mirrored-istio-install-cni:1.10.2,linux-tools-4.15.0-144,ubuntu,CVE-2021-3609,HIGH,https://avd.aquasec.com/nvd/cve-2021-3609,4.15.0-147.151,,triaged,
 rancher/mirrored-istio-install-cni:1.10.2,linux-tools-4.15.0-144-generic,ubuntu,CVE-2021-3600,HIGH,https://avd.aquasec.com/nvd/cve-2021-3600,4.15.0-147.151,,triaged,
@@ -678,6 +705,8 @@ rancher/mirrored-istio-install-cni:1.10.2,linux-tools-common,ubuntu,CVE-2021-360
 rancher/mirrored-istio-install-cni:1.10.2,linux-tools-common,ubuntu,CVE-2021-3609,HIGH,https://avd.aquasec.com/nvd/cve-2021-3609,4.15.0-147.151,,triaged,
 rancher/mirrored-istio-kubectl:1.5.9,libssl1.1,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-kubectl:1.5.9,libssl1.1,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-istio-kubectl:1.5.9,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-istio-kubectl:1.5.9,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/mirrored-istio-kubectl:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-12351,HIGH,https://avd.aquasec.com/nvd/cve-2020-12351,4.15.0-122.124,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-kubectl:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-14386,HIGH,https://avd.aquasec.com/nvd/cve-2020-14386,4.15.0-117.118,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-kubectl:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-16119,HIGH,https://avd.aquasec.com/nvd/cve-2020-16119,4.15.0-121.123,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
@@ -716,6 +745,8 @@ rancher/mirrored-istio-kubectl:1.5.9,openssl,ubuntu,CVE-2021-3449,HIGH,https://a
 rancher/mirrored-istio-kubectl:1.5.9,sudo,ubuntu,CVE-2021-3156,HIGH,https://avd.aquasec.com/nvd/cve-2021-3156,1.8.21p2-3ubuntu1.4,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-mixer:1.5.9,libssl1.1,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-mixer:1.5.9,libssl1.1,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-istio-mixer:1.5.9,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-istio-mixer:1.5.9,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/mirrored-istio-mixer:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-12351,HIGH,https://avd.aquasec.com/nvd/cve-2020-12351,4.15.0-122.124,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-mixer:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-14386,HIGH,https://avd.aquasec.com/nvd/cve-2020-14386,4.15.0-117.118,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-mixer:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-16119,HIGH,https://avd.aquasec.com/nvd/cve-2020-16119,4.15.0-121.123,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
@@ -758,6 +789,8 @@ rancher/mirrored-istio-mixer:1.5.9,golang.org/x/crypto,ubuntu,CVE-2020-29652,HIG
 rancher/mirrored-istio-mixer:1.5.9,golang.org/x/crypto,ubuntu,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-node-agent-k8s:1.5.9,libssl1.1,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-node-agent-k8s:1.5.9,libssl1.1,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-istio-node-agent-k8s:1.5.9,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-istio-node-agent-k8s:1.5.9,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/mirrored-istio-node-agent-k8s:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-12351,HIGH,https://avd.aquasec.com/nvd/cve-2020-12351,4.15.0-122.124,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-node-agent-k8s:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-14386,HIGH,https://avd.aquasec.com/nvd/cve-2020-14386,4.15.0-117.118,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-node-agent-k8s:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-16119,HIGH,https://avd.aquasec.com/nvd/cve-2020-16119,4.15.0-121.123,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
@@ -798,6 +831,8 @@ rancher/mirrored-istio-node-agent-k8s:1.5.9,github.com/dgrijalva/jwt-go,ubuntu,C
 rancher/mirrored-istio-node-agent-k8s:1.5.9,github.com/gogo/protobuf,ubuntu,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-node-agent-k8s:1.5.9,golang.org/x/crypto,ubuntu,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-node-agent-k8s:1.5.9,golang.org/x/crypto,ubuntu,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-istio-pilot:1.10.2,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-istio-pilot:1.10.2,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/mirrored-istio-pilot:1.10.2,linux-tools-4.15.0-144,ubuntu,CVE-2021-3600,HIGH,https://avd.aquasec.com/nvd/cve-2021-3600,4.15.0-147.151,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-pilot:1.10.2,linux-tools-4.15.0-144,ubuntu,CVE-2021-3609,HIGH,https://avd.aquasec.com/nvd/cve-2021-3609,4.15.0-147.151,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-pilot:1.10.2,linux-tools-4.15.0-144-generic,ubuntu,CVE-2021-3600,HIGH,https://avd.aquasec.com/nvd/cve-2021-3600,4.15.0-147.151,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
@@ -806,6 +841,8 @@ rancher/mirrored-istio-pilot:1.10.2,linux-tools-common,ubuntu,CVE-2021-3600,HIGH
 rancher/mirrored-istio-pilot:1.10.2,linux-tools-common,ubuntu,CVE-2021-3609,HIGH,https://avd.aquasec.com/nvd/cve-2021-3609,4.15.0-147.151,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-pilot:1.5.9,libssl1.1,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-pilot:1.5.9,libssl1.1,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-istio-pilot:1.5.9,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-istio-pilot:1.5.9,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/mirrored-istio-pilot:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-12351,HIGH,https://avd.aquasec.com/nvd/cve-2020-12351,4.15.0-122.124,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-pilot:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-14386,HIGH,https://avd.aquasec.com/nvd/cve-2020-14386,4.15.0-117.118,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-pilot:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-16119,HIGH,https://avd.aquasec.com/nvd/cve-2020-16119,4.15.0-121.123,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
@@ -847,6 +884,8 @@ rancher/mirrored-istio-pilot:1.5.9,github.com/hashicorp/consul,ubuntu,CVE-2020-1
 rancher/mirrored-istio-pilot:1.5.9,github.com/hashicorp/consul,ubuntu,CVE-2020-7219,HIGH,https://avd.aquasec.com/nvd/cve-2020-7219,v1.6.3,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-pilot:1.5.9,golang.org/x/crypto,ubuntu,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-pilot:1.5.9,golang.org/x/crypto,ubuntu,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-istio-proxyv2:1.10.2,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-istio-proxyv2:1.10.2,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/mirrored-istio-proxyv2:1.10.2,linux-tools-4.15.0-144,ubuntu,CVE-2021-3600,HIGH,https://avd.aquasec.com/nvd/cve-2021-3600,4.15.0-147.151,,triaged,
 rancher/mirrored-istio-proxyv2:1.10.2,linux-tools-4.15.0-144,ubuntu,CVE-2021-3609,HIGH,https://avd.aquasec.com/nvd/cve-2021-3609,4.15.0-147.151,,triaged,
 rancher/mirrored-istio-proxyv2:1.10.2,linux-tools-4.15.0-144-generic,ubuntu,CVE-2021-3600,HIGH,https://avd.aquasec.com/nvd/cve-2021-3600,4.15.0-147.151,,triaged,
@@ -855,6 +894,8 @@ rancher/mirrored-istio-proxyv2:1.10.2,linux-tools-common,ubuntu,CVE-2021-3600,HI
 rancher/mirrored-istio-proxyv2:1.10.2,linux-tools-common,ubuntu,CVE-2021-3609,HIGH,https://avd.aquasec.com/nvd/cve-2021-3609,4.15.0-147.151,,triaged,
 rancher/mirrored-istio-proxyv2:1.5.9,libssl1.1,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-proxyv2:1.5.9,libssl1.1,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-istio-proxyv2:1.5.9,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-istio-proxyv2:1.5.9,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/mirrored-istio-proxyv2:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-12351,HIGH,https://avd.aquasec.com/nvd/cve-2020-12351,4.15.0-122.124,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-proxyv2:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-14386,HIGH,https://avd.aquasec.com/nvd/cve-2020-14386,4.15.0-117.118,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-proxyv2:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-16119,HIGH,https://avd.aquasec.com/nvd/cve-2020-16119,4.15.0-121.123,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
@@ -896,6 +937,8 @@ rancher/mirrored-istio-proxyv2:1.5.9,golang.org/x/crypto,ubuntu,CVE-2020-29652,H
 rancher/mirrored-istio-proxyv2:1.5.9,golang.org/x/crypto,ubuntu,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-sidecar_injector:1.5.9,libssl1.1,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-sidecar_injector:1.5.9,libssl1.1,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-istio-sidecar_injector:1.5.9,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-istio-sidecar_injector:1.5.9,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/mirrored-istio-sidecar_injector:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-12351,HIGH,https://avd.aquasec.com/nvd/cve-2020-12351,4.15.0-122.124,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-sidecar_injector:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-14386,HIGH,https://avd.aquasec.com/nvd/cve-2020-14386,4.15.0-117.118,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-sidecar_injector:1.5.9,linux-tools-4.15.0-112,ubuntu,CVE-2020-16119,HIGH,https://avd.aquasec.com/nvd/cve-2020-16119,4.15.0-121.123,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
@@ -972,8 +1015,12 @@ rancher/mirrored-jenkins-jnlp-slave:4.7-1,libgcrypt20,debian,CVE-2021-33560,HIGH
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,libgnutls30,debian,CVE-2021-20231,CRITICAL,https://avd.aquasec.com/nvd/cve-2021-20231,3.6.7-4+deb10u7,,triaged,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,libgnutls30,debian,CVE-2021-20232,CRITICAL,https://avd.aquasec.com/nvd/cve-2021-20232,3.6.7-4+deb10u7,,triaged,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,libgnutls30,debian,CVE-2020-24659,HIGH,https://avd.aquasec.com/nvd/cve-2020-24659,3.6.7-4+deb10u7,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
+rancher/mirrored-jenkins-jnlp-slave:4.7-1,libgssapi-krb5-2,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,,,triaged,
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,libhogweed4,debian,CVE-2021-20305,HIGH,https://avd.aquasec.com/nvd/cve-2021-20305,3.4.1-1+deb10u1,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,libidn2-0,debian,CVE-2019-12290,HIGH,https://avd.aquasec.com/nvd/cve-2019-12290,,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
+rancher/mirrored-jenkins-jnlp-slave:4.7-1,libk5crypto3,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,,,triaged,
+rancher/mirrored-jenkins-jnlp-slave:4.7-1,libkrb5-3,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,,,triaged,
+rancher/mirrored-jenkins-jnlp-slave:4.7-1,libkrb5support0,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,,,triaged,
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,liblz4-1,debian,CVE-2021-3520,CRITICAL,https://avd.aquasec.com/nvd/cve-2021-3520,1.8.3-1+deb10u1,,triaged,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,libnettle6,debian,CVE-2021-20305,HIGH,https://avd.aquasec.com/nvd/cve-2021-20305,3.4.1-1+deb10u1,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,libpcre2-8-0,debian,CVE-2019-20454,HIGH,https://avd.aquasec.com/nvd/cve-2019-20454,,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
@@ -1302,6 +1349,7 @@ rancher/mirrored-kiali-kiali:v1.35.0,glibc,redhat,CVE-2019-1010022,CRITICAL,http
 rancher/mirrored-kiali-kiali:v1.35.0,glibc-common,redhat,CVE-2019-1010022,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-1010022,,,triaged,
 rancher/mirrored-kiali-kiali:v1.35.0,glibc-minimal-langpack,redhat,CVE-2019-1010022,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-1010022,,,triaged,
 rancher/mirrored-kiali-kiali:v1.35.0,sqlite-libs,redhat,CVE-2019-5827,HIGH,https://avd.aquasec.com/nvd/cve-2019-5827,,,triaged,
+rancher/mirrored-kiali-kiali:v1.35.0,systemd-libs,redhat,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,,,triaged,
 rancher/mirrored-kiali-kiali:v1.35.0,github.com/dgrijalva/jwt-go,redhat,CVE-2020-26160,HIGH,https://avd.aquasec.com/nvd/cve-2020-26160,,,triaged,
 rancher/mirrored-kiali-kiali:v1.35.0,github.com/gogo/protobuf,redhat,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
 rancher/mirrored-kiali-kiali:v1.35.0,golang.org/x/crypto,redhat,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
@@ -1330,6 +1378,8 @@ rancher/mirrored-library-nginx:1.21.0-alpine,libcurl,alpine,CVE-2021-22901,HIGH,
 rancher/mirrored-library-nginx:1.21.0-alpine,libgcrypt,alpine,CVE-2021-33560,HIGH,https://avd.aquasec.com/nvd/cve-2021-33560,1.8.8-r0,,triaged,
 rancher/mirrored-library-nginx:1.21.0-alpine,libxml2,alpine,CVE-2021-3517,HIGH,https://avd.aquasec.com/nvd/cve-2021-3517,2.9.10-r7,,triaged,
 rancher/mirrored-library-nginx:1.21.0-alpine,libxml2,alpine,CVE-2021-3518,HIGH,https://avd.aquasec.com/nvd/cve-2021-3518,2.9.10-r7,,triaged,
+rancher/mirrored-longhornio-backing-image-manager:v1_20210422,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-longhornio-backing-image-manager:v1_20210422,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/mirrored-longhornio-csi-attacher:v2.2.1-lh1,github.com/gogo/protobuf,debian,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
 rancher/mirrored-longhornio-csi-attacher:v2.2.1-lh1,golang.org/x/crypto,debian,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
 rancher/mirrored-longhornio-csi-attacher:v2.2.1-lh1,golang.org/x/crypto,debian,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,triaged,
@@ -1342,8 +1392,16 @@ rancher/mirrored-longhornio-csi-resizer:v0.5.1-lh1,golang.org/x/crypto,debian,CV
 rancher/mirrored-longhornio-csi-snapshotter:v2.1.1-lh1,github.com/gogo/protobuf,debian,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
 rancher/mirrored-longhornio-csi-snapshotter:v2.1.1-lh1,golang.org/x/crypto,debian,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
 rancher/mirrored-longhornio-csi-snapshotter:v2.1.1-lh1,golang.org/x/crypto,debian,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,triaged,
+rancher/mirrored-longhornio-longhorn-engine:v1.1.1,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-longhornio-longhorn-engine:v1.1.1,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/mirrored-longhornio-longhorn-engine:v1.1.1,github.com/satori/go.uuid,ubuntu,CVE-2021-3538,CRITICAL,https://avd.aquasec.com/nvd/cve-2021-3538,v1.2.0,,triaged,
 rancher/mirrored-longhornio-longhorn-engine:v1.1.1,github.com/satori/go.uuid,ubuntu,CVE-2021-3538,CRITICAL,https://avd.aquasec.com/nvd/cve-2021-3538,v1.2.0,,triaged,
+rancher/mirrored-longhornio-longhorn-instance-manager:v1_20201216,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-longhornio-longhorn-instance-manager:v1_20201216,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-longhornio-longhorn-manager:v1.1.1,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-longhornio-longhorn-manager:v1.1.1,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-longhornio-longhorn-share-manager:v1_20210416,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/mirrored-longhornio-longhorn-share-manager:v1_20210416,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/mirrored-longhornio-longhorn-ui:v1.1.1,curl,alpine,CVE-2021-22901,HIGH,https://avd.aquasec.com/nvd/cve-2021-22901,7.77.0-r0,,triaged,
 rancher/mirrored-longhornio-longhorn-ui:v1.1.1,libgcrypt,alpine,CVE-2021-33560,HIGH,https://avd.aquasec.com/nvd/cve-2021-33560,1.8.8-r0,,triaged,
 rancher/mirrored-longhornio-longhorn-ui:v1.1.1,libxml2,alpine,CVE-2021-3517,HIGH,https://avd.aquasec.com/nvd/cve-2021-3517,2.9.10-r7,,triaged,
@@ -1614,6 +1672,7 @@ rancher/pipeline-jenkins-server:v0.1.4,gnupg-agent,debian,CVE-2018-1000858,HIGH,
 rancher/pipeline-jenkins-server:v0.1.4,gnupg-l10n,debian,CVE-2018-1000858,HIGH,https://avd.aquasec.com/nvd/cve-2018-1000858,,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/pipeline-jenkins-server:v0.1.4,gpgv,debian,CVE-2018-1000858,HIGH,https://avd.aquasec.com/nvd/cve-2018-1000858,,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/pipeline-jenkins-server:v0.1.4,krb5-locales,debian,CVE-2020-28196,HIGH,https://avd.aquasec.com/nvd/cve-2020-28196,1.15-1+deb9u2,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
+rancher/pipeline-jenkins-server:v0.1.4,krb5-locales,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,,,triaged,
 rancher/pipeline-jenkins-server:v0.1.4,libblkid1,debian,CVE-2016-2779,HIGH,https://avd.aquasec.com/nvd/cve-2016-2779,,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/pipeline-jenkins-server:v0.1.4,libbsd0,debian,CVE-2019-20367,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-20367,0.8.3-1+deb9u1,,triaged,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/pipeline-jenkins-server:v0.1.4,libbz2-1.0,debian,CVE-2019-12900,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-12900,,,triaged,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
@@ -1655,10 +1714,14 @@ rancher/pipeline-jenkins-server:v0.1.4,libgcc1,debian,CVE-2018-12886,HIGH,https:
 rancher/pipeline-jenkins-server:v0.1.4,libgcrypt20,debian,CVE-2021-33560,HIGH,https://avd.aquasec.com/nvd/cve-2021-33560,1.7.6-2+deb9u4,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/pipeline-jenkins-server:v0.1.4,libgnutls30,debian,CVE-2019-3829,HIGH,https://avd.aquasec.com/nvd/cve-2019-3829,3.5.8-5+deb9u5,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/pipeline-jenkins-server:v0.1.4,libgssapi-krb5-2,debian,CVE-2020-28196,HIGH,https://avd.aquasec.com/nvd/cve-2020-28196,1.15-1+deb9u2,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
+rancher/pipeline-jenkins-server:v0.1.4,libgssapi-krb5-2,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,,,triaged,
 rancher/pipeline-jenkins-server:v0.1.4,libhogweed4,debian,CVE-2021-20305,HIGH,https://avd.aquasec.com/nvd/cve-2021-20305,,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/pipeline-jenkins-server:v0.1.4,libk5crypto3,debian,CVE-2020-28196,HIGH,https://avd.aquasec.com/nvd/cve-2020-28196,1.15-1+deb9u2,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
+rancher/pipeline-jenkins-server:v0.1.4,libk5crypto3,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,,,triaged,
 rancher/pipeline-jenkins-server:v0.1.4,libkrb5-3,debian,CVE-2020-28196,HIGH,https://avd.aquasec.com/nvd/cve-2020-28196,1.15-1+deb9u2,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
+rancher/pipeline-jenkins-server:v0.1.4,libkrb5-3,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,,,triaged,
 rancher/pipeline-jenkins-server:v0.1.4,libkrb5support0,debian,CVE-2020-28196,HIGH,https://avd.aquasec.com/nvd/cve-2020-28196,1.15-1+deb9u2,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
+rancher/pipeline-jenkins-server:v0.1.4,libkrb5support0,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,,,triaged,
 rancher/pipeline-jenkins-server:v0.1.4,libldap-2.4-2,debian,CVE-2019-13565,HIGH,https://avd.aquasec.com/nvd/cve-2019-13565,2.4.44+dfsg-5+deb9u3,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/pipeline-jenkins-server:v0.1.4,libldap-2.4-2,debian,CVE-2020-12243,HIGH,https://avd.aquasec.com/nvd/cve-2020-12243,2.4.44+dfsg-5+deb9u4,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/pipeline-jenkins-server:v0.1.4,libldap-2.4-2,debian,CVE-2020-25692,HIGH,https://avd.aquasec.com/nvd/cve-2020-25692,2.4.44+dfsg-5+deb9u5,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
@@ -1800,6 +1863,15 @@ rancher/rancher:master-head,github.com/dgrijalva/jwt-go,suse linux enterprise se
 rancher/rancher:master-head,github.com/opencontainers/runc,suse linux enterprise server,CVE-2019-16884,HIGH,https://avd.aquasec.com/nvd/cve-2019-16884,v1.0.0-rc8.0.20190930145003-cad42f6e0932,,triaged,
 rancher/rancher:master-head,github.com/opencontainers/runc,suse linux enterprise server,CVE-2019-19921,HIGH,https://avd.aquasec.com/nvd/cve-2019-19921,v1.0.0-rc9.0.20200122160610-2fc03cc11c77,,triaged,
 rancher/rancher:master-head,github.com/gogo/protobuf,suse linux enterprise server,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
+rancher/rke-tools:v0.1.75,libgcrypt,alpine,CVE-2021-33560,HIGH,https://avd.aquasec.com/nvd/cve-2021-33560,1.8.8-r0,,triaged,
+rancher/rke-tools:v0.1.75,libxml2,alpine,CVE-2021-3517,HIGH,https://avd.aquasec.com/nvd/cve-2021-3517,2.9.10-r7,,triaged,
+rancher/rke-tools:v0.1.75,libxml2,alpine,CVE-2021-3518,HIGH,https://avd.aquasec.com/nvd/cve-2021-3518,2.9.10-r7,,triaged,
+rancher/rke-tools:v0.1.75,github.com/gogo/protobuf,alpine,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
+rancher/rke-tools:v0.1.75,github.com/hashicorp/consul,alpine,CVE-2020-7219,HIGH,https://avd.aquasec.com/nvd/cve-2020-7219,v1.6.3,,triaged,
+rancher/rke-tools:v0.1.75,golang.org/x/crypto,alpine,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
+rancher/rke-tools:v0.1.75,golang.org/x/crypto,alpine,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,triaged,
+rancher/rke-tools:v0.1.75,golang.org/x/net,alpine,CVE-2018-17075,HIGH,https://avd.aquasec.com/nvd/cve-2018-17075,v0.0.0-20180816102801-aaf60122140d,,triaged,
+rancher/rke-tools:v0.1.75,golang.org/x/net,alpine,CVE-2018-17846,HIGH,https://avd.aquasec.com/nvd/cve-2018-17846,v0.0.0-20190125091013-d26f9f9a57f3,,triaged,
 rancher/rke-tools:v0.1.76,libgcrypt,alpine,CVE-2021-33560,HIGH,https://avd.aquasec.com/nvd/cve-2021-33560,1.8.8-r0,,triaged,
 rancher/rke-tools:v0.1.76,github.com/gogo/protobuf,alpine,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
 rancher/rke-tools:v0.1.76,golang.org/x/crypto,alpine,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
@@ -1818,12 +1890,20 @@ rancher/rke2-runtime:v1.21.2-rke2r1,github.com/gogo/protobuf,gobinary,CVE-2021-3
 rancher/rke2-upgrade:v1.21.2-rke2r1,github.com/dgrijalva/jwt-go,alpine,CVE-2020-26160,HIGH,https://avd.aquasec.com/nvd/cve-2020-26160,,,triaged,
 rancher/security-scan:v0.1.14,libssl1.1,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,triaged,
 rancher/security-scan:v0.1.14,libssl1.1,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,triaged,
+rancher/security-scan:v0.1.14,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/security-scan:v0.1.14,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/security-scan:v0.1.14,openssl,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,triaged,
 rancher/security-scan:v0.1.14,openssl,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,triaged,
 rancher/security-scan:v0.1.14,github.com/dgrijalva/jwt-go,ubuntu,CVE-2020-26160,HIGH,https://avd.aquasec.com/nvd/cve-2020-26160,,,triaged,
 rancher/security-scan:v0.1.14,github.com/gogo/protobuf,ubuntu,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
 rancher/security-scan:v0.1.14,golang.org/x/crypto,ubuntu,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
 rancher/security-scan:v0.1.14,golang.org/x/crypto,ubuntu,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,triaged,
+rancher/security-scan:v0.2.3,libnss-systemd,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/security-scan:v0.2.3,libpam-systemd,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/security-scan:v0.2.3,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/security-scan:v0.2.3,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/security-scan:v0.2.3,systemd,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
+rancher/security-scan:v0.2.3,systemd-sysv,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
 rancher/security-scan:v0.2.3,github.com/dgrijalva/jwt-go,ubuntu,CVE-2020-26160,HIGH,https://avd.aquasec.com/nvd/cve-2020-26160,,,triaged,
 rancher/security-scan:v0.2.3,github.com/gogo/protobuf,ubuntu,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
 rancher/security-scan:v0.2.3,golang.org/x/crypto,ubuntu,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
