@@ -582,6 +582,8 @@ rancher/mirrored-grafana-grafana:6.7.4,github.com/crewjam/saml,alpine,CVE-2020-2
 rancher/mirrored-grafana-grafana:6.7.4,github.com/russellhaering/goxmldsig,alpine,CVE-2020-7711,HIGH,https://avd.aquasec.com/nvd/cve-2020-7711,v1.1.0,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-grafana-grafana:6.7.4,golang.org/x/crypto,alpine,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-grafana-grafana:6.7.4,golang.org/x/crypto,alpine,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
+rancher/mirrored-grafana-grafana:7.5.8,krb5-libs,alpine,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,1.18.4-r0,,triaged,
+rancher/mirrored-idealista-prom2teams:3.2.2,krb5-libs,alpine,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,1.18.4-r0,,triaged,
 rancher/mirrored-istio-citadel:1.5.9,libssl1.1,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-citadel:1.5.9,libssl1.1,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/mirrored-istio-citadel:1.5.9,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
@@ -1058,12 +1060,12 @@ rancher/mirrored-jenkins-jnlp-slave:4.7-1,libgcrypt20,debian,CVE-2021-33560,HIGH
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,libgnutls30,debian,CVE-2021-20231,CRITICAL,https://avd.aquasec.com/nvd/cve-2021-20231,3.6.7-4+deb10u7,,triaged,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,libgnutls30,debian,CVE-2021-20232,CRITICAL,https://avd.aquasec.com/nvd/cve-2021-20232,3.6.7-4+deb10u7,,triaged,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,libgnutls30,debian,CVE-2020-24659,HIGH,https://avd.aquasec.com/nvd/cve-2020-24659,3.6.7-4+deb10u7,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
-rancher/mirrored-jenkins-jnlp-slave:4.7-1,libgssapi-krb5-2,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,,,triaged,
+rancher/mirrored-jenkins-jnlp-slave:4.7-1,libgssapi-krb5-2,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,1.17-3+deb10u2,,triaged,
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,libhogweed4,debian,CVE-2021-20305,HIGH,https://avd.aquasec.com/nvd/cve-2021-20305,3.4.1-1+deb10u1,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,libidn2-0,debian,CVE-2019-12290,HIGH,https://avd.aquasec.com/nvd/cve-2019-12290,,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
-rancher/mirrored-jenkins-jnlp-slave:4.7-1,libk5crypto3,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,,,triaged,
-rancher/mirrored-jenkins-jnlp-slave:4.7-1,libkrb5-3,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,,,triaged,
-rancher/mirrored-jenkins-jnlp-slave:4.7-1,libkrb5support0,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,,,triaged,
+rancher/mirrored-jenkins-jnlp-slave:4.7-1,libk5crypto3,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,1.17-3+deb10u2,,triaged,
+rancher/mirrored-jenkins-jnlp-slave:4.7-1,libkrb5-3,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,1.17-3+deb10u2,,triaged,
+rancher/mirrored-jenkins-jnlp-slave:4.7-1,libkrb5support0,debian,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,1.17-3+deb10u2,,triaged,
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,liblz4-1,debian,CVE-2021-3520,CRITICAL,https://avd.aquasec.com/nvd/cve-2021-3520,1.8.3-1+deb10u1,,triaged,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,libnettle6,debian,CVE-2021-20305,HIGH,https://avd.aquasec.com/nvd/cve-2021-20305,3.4.1-1+deb10u1,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
 rancher/mirrored-jenkins-jnlp-slave:4.7-1,libpcre2-8-0,debian,CVE-2019-20454,HIGH,https://avd.aquasec.com/nvd/cve-2019-20454,,,ignore,Image is required only for a deprecated feature pipeline. Pipeline should no longer be used and this image should only be included in air gapped registry if necessary.
@@ -1396,6 +1398,7 @@ rancher/mirrored-kiali-kiali:v1.35.0,systemd-libs,redhat,CVE-2021-33910,HIGH,htt
 rancher/mirrored-kiali-kiali:v1.35.0,github.com/dgrijalva/jwt-go,redhat,CVE-2020-26160,HIGH,https://avd.aquasec.com/nvd/cve-2020-26160,,,triaged,
 rancher/mirrored-kiali-kiali:v1.35.0,github.com/gogo/protobuf,redhat,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
 rancher/mirrored-kiali-kiali:v1.35.0,golang.org/x/crypto,redhat,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
+rancher/mirrored-kiwigrid-k8s-sidecar:1.12.2,krb5-libs,alpine,CVE-2021-36222,HIGH,https://avd.aquasec.com/nvd/cve-2021-36222,1.18.4-r0,,triaged,
 rancher/mirrored-kube-rbac-proxy:v0.5.0,apk-tools,alpine,CVE-2021-30139,HIGH,https://avd.aquasec.com/nvd/cve-2021-30139,2.10.6-r0,,triaged,
 rancher/mirrored-kube-rbac-proxy:v0.5.0,busybox,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.31.1-r10,,triaged,
 rancher/mirrored-kube-rbac-proxy:v0.5.0,libcrypto1.1,alpine,CVE-2020-1967,HIGH,https://avd.aquasec.com/nvd/cve-2020-1967,1.1.1g-r0,,triaged,
