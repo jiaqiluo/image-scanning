@@ -34,6 +34,8 @@ rancher/fleet-agent:v0.3.6-rc6,github.com/gogo/protobuf,alpine,CVE-2021-3121,HIG
 rancher/fleet:v0.3.6-rc6,github.com/deislabs/oras,alpine,CVE-2021-21272,HIGH,https://avd.aquasec.com/nvd/cve-2021-21272,v0.9.0,,triaged,
 rancher/fleet:v0.3.6-rc6,github.com/dgrijalva/jwt-go,alpine,CVE-2020-26160,HIGH,https://avd.aquasec.com/nvd/cve-2020-26160,,,triaged,
 rancher/fleet:v0.3.6-rc6,github.com/gogo/protobuf,alpine,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
+rancher/fluentd:v0.1.28,addressable,alpine,CVE-2021-32740,HIGH,https://avd.aquasec.com/nvd/cve-2021-32740,2.8.0,,triaged,
+rancher/fluentd:v0.1.28,addressable,alpine,CVE-2021-32740,HIGH,https://avd.aquasec.com/nvd/cve-2021-32740,2.8.0,,triaged,
 rancher/gitjob:v0.1.15,apk-tools,alpine,CVE-2021-30139,HIGH,https://avd.aquasec.com/nvd/cve-2021-30139,2.10.6-r0,,triaged,
 rancher/gitjob:v0.1.15,busybox,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.31.1-r20,,triaged,
 rancher/gitjob:v0.1.15,libcrypto1.1,alpine,CVE-2021-23840,HIGH,https://avd.aquasec.com/nvd/cve-2021-23840,1.1.1j-r0,,triaged,
