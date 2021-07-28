@@ -208,55 +208,55 @@ rancher/istio-1.5-migration:0.1.1,libssl1.1,alpine,CVE-2021-3450,HIGH,https://av
 rancher/istio-1.5-migration:0.1.1,ssl_client,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.31.1-r20,,ignore,"Image is required only for a deprecated chart, rancher-istio:1.5.920."
 rancher/istio-installer:1.10.2-rancher1,github.com/docker/distribution,alpine,CVE-2017-11468,HIGH,https://avd.aquasec.com/nvd/cve-2017-11468,v2.7.0-rc.0+incompatible,,triaged,
 rancher/istio-installer:1.10.2-rancher1,github.com/ulikunitz/xz,alpine,CVE-2021-29482,HIGH,https://avd.aquasec.com/nvd/cve-2021-29482,v0.5.8,,triaged,
-rancher/istio-kubectl:1.4.6,libssl1.1,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,triaged,
-rancher/istio-kubectl:1.4.6,libssl1.1,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,triaged,
-rancher/istio-kubectl:1.4.6,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
-rancher/istio-kubectl:1.4.6,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-11884,HIGH,https://avd.aquasec.com/nvd/cve-2020-11884,4.15.0-99.100,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-12351,HIGH,https://avd.aquasec.com/nvd/cve-2020-12351,4.15.0-122.124,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-12654,HIGH,https://avd.aquasec.com/nvd/cve-2020-12654,4.15.0-96.97,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-14386,HIGH,https://avd.aquasec.com/nvd/cve-2020-14386,4.15.0-117.118,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-16119,HIGH,https://avd.aquasec.com/nvd/cve-2020-16119,4.15.0-121.123,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-27170,HIGH,https://avd.aquasec.com/nvd/cve-2020-27170,4.15.0-140.144,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-27171,HIGH,https://avd.aquasec.com/nvd/cve-2020-27171,4.15.0-140.144,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-28374,HIGH,https://avd.aquasec.com/nvd/cve-2020-28374,4.15.0-132.136,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2021-27365,HIGH,https://avd.aquasec.com/nvd/cve-2021-27365,4.15.0-139.143,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2021-29154,HIGH,https://avd.aquasec.com/nvd/cve-2021-29154,4.15.0-142.146,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2021-33909,HIGH,https://avd.aquasec.com/nvd/cve-2021-33909,4.15.0-151.157,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2021-3493,HIGH,https://avd.aquasec.com/nvd/cve-2021-3493,4.15.0-142.146,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2021-3600,HIGH,https://avd.aquasec.com/nvd/cve-2021-3600,4.15.0-147.151,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2021-3609,HIGH,https://avd.aquasec.com/nvd/cve-2021-3609,4.15.0-147.151,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-11884,HIGH,https://avd.aquasec.com/nvd/cve-2020-11884,4.15.0-99.100,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-12351,HIGH,https://avd.aquasec.com/nvd/cve-2020-12351,4.15.0-122.124,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-12654,HIGH,https://avd.aquasec.com/nvd/cve-2020-12654,4.15.0-96.97,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-14386,HIGH,https://avd.aquasec.com/nvd/cve-2020-14386,4.15.0-117.118,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-16119,HIGH,https://avd.aquasec.com/nvd/cve-2020-16119,4.15.0-121.123,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-27170,HIGH,https://avd.aquasec.com/nvd/cve-2020-27170,4.15.0-140.144,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-27171,HIGH,https://avd.aquasec.com/nvd/cve-2020-27171,4.15.0-140.144,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-28374,HIGH,https://avd.aquasec.com/nvd/cve-2020-28374,4.15.0-132.136,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2021-27365,HIGH,https://avd.aquasec.com/nvd/cve-2021-27365,4.15.0-139.143,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2021-29154,HIGH,https://avd.aquasec.com/nvd/cve-2021-29154,4.15.0-142.146,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2021-33909,HIGH,https://avd.aquasec.com/nvd/cve-2021-33909,4.15.0-151.157,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2021-3493,HIGH,https://avd.aquasec.com/nvd/cve-2021-3493,4.15.0-142.146,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2021-3600,HIGH,https://avd.aquasec.com/nvd/cve-2021-3600,4.15.0-147.151,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2021-3609,HIGH,https://avd.aquasec.com/nvd/cve-2021-3609,4.15.0-147.151,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-11884,HIGH,https://avd.aquasec.com/nvd/cve-2020-11884,4.15.0-99.100,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-12351,HIGH,https://avd.aquasec.com/nvd/cve-2020-12351,4.15.0-122.124,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-12654,HIGH,https://avd.aquasec.com/nvd/cve-2020-12654,4.15.0-96.97,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-14386,HIGH,https://avd.aquasec.com/nvd/cve-2020-14386,4.15.0-117.118,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-16119,HIGH,https://avd.aquasec.com/nvd/cve-2020-16119,4.15.0-121.123,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-27170,HIGH,https://avd.aquasec.com/nvd/cve-2020-27170,4.15.0-140.144,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-27171,HIGH,https://avd.aquasec.com/nvd/cve-2020-27171,4.15.0-140.144,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-28374,HIGH,https://avd.aquasec.com/nvd/cve-2020-28374,4.15.0-132.136,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2021-27365,HIGH,https://avd.aquasec.com/nvd/cve-2021-27365,4.15.0-139.143,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2021-29154,HIGH,https://avd.aquasec.com/nvd/cve-2021-29154,4.15.0-142.146,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2021-33909,HIGH,https://avd.aquasec.com/nvd/cve-2021-33909,4.15.0-151.157,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2021-3493,HIGH,https://avd.aquasec.com/nvd/cve-2021-3493,4.15.0-142.146,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2021-3600,HIGH,https://avd.aquasec.com/nvd/cve-2021-3600,4.15.0-147.151,,triaged,
-rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2021-3609,HIGH,https://avd.aquasec.com/nvd/cve-2021-3609,4.15.0-147.151,,triaged,
-rancher/istio-kubectl:1.4.6,openssl,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,triaged,
-rancher/istio-kubectl:1.4.6,openssl,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,triaged,
-rancher/istio-kubectl:1.4.6,sudo,ubuntu,CVE-2021-3156,HIGH,https://avd.aquasec.com/nvd/cve-2021-3156,1.8.21p2-3ubuntu1.4,,triaged,
+rancher/istio-kubectl:1.4.6,libssl1.1,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,libssl1.1,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,libudev1,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-11884,HIGH,https://avd.aquasec.com/nvd/cve-2020-11884,4.15.0-99.100,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-12351,HIGH,https://avd.aquasec.com/nvd/cve-2020-12351,4.15.0-122.124,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-12654,HIGH,https://avd.aquasec.com/nvd/cve-2020-12654,4.15.0-96.97,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-14386,HIGH,https://avd.aquasec.com/nvd/cve-2020-14386,4.15.0-117.118,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-16119,HIGH,https://avd.aquasec.com/nvd/cve-2020-16119,4.15.0-121.123,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-27170,HIGH,https://avd.aquasec.com/nvd/cve-2020-27170,4.15.0-140.144,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-27171,HIGH,https://avd.aquasec.com/nvd/cve-2020-27171,4.15.0-140.144,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2020-28374,HIGH,https://avd.aquasec.com/nvd/cve-2020-28374,4.15.0-132.136,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2021-27365,HIGH,https://avd.aquasec.com/nvd/cve-2021-27365,4.15.0-139.143,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2021-29154,HIGH,https://avd.aquasec.com/nvd/cve-2021-29154,4.15.0-142.146,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2021-33909,HIGH,https://avd.aquasec.com/nvd/cve-2021-33909,4.15.0-151.157,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2021-3493,HIGH,https://avd.aquasec.com/nvd/cve-2021-3493,4.15.0-142.146,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2021-3600,HIGH,https://avd.aquasec.com/nvd/cve-2021-3600,4.15.0-147.151,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76,ubuntu,CVE-2021-3609,HIGH,https://avd.aquasec.com/nvd/cve-2021-3609,4.15.0-147.151,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-11884,HIGH,https://avd.aquasec.com/nvd/cve-2020-11884,4.15.0-99.100,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-12351,HIGH,https://avd.aquasec.com/nvd/cve-2020-12351,4.15.0-122.124,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-12654,HIGH,https://avd.aquasec.com/nvd/cve-2020-12654,4.15.0-96.97,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-14386,HIGH,https://avd.aquasec.com/nvd/cve-2020-14386,4.15.0-117.118,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-16119,HIGH,https://avd.aquasec.com/nvd/cve-2020-16119,4.15.0-121.123,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-27170,HIGH,https://avd.aquasec.com/nvd/cve-2020-27170,4.15.0-140.144,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-27171,HIGH,https://avd.aquasec.com/nvd/cve-2020-27171,4.15.0-140.144,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2020-28374,HIGH,https://avd.aquasec.com/nvd/cve-2020-28374,4.15.0-132.136,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2021-27365,HIGH,https://avd.aquasec.com/nvd/cve-2021-27365,4.15.0-139.143,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2021-29154,HIGH,https://avd.aquasec.com/nvd/cve-2021-29154,4.15.0-142.146,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2021-33909,HIGH,https://avd.aquasec.com/nvd/cve-2021-33909,4.15.0-151.157,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2021-3493,HIGH,https://avd.aquasec.com/nvd/cve-2021-3493,4.15.0-142.146,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2021-3600,HIGH,https://avd.aquasec.com/nvd/cve-2021-3600,4.15.0-147.151,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-4.15.0-76-generic,ubuntu,CVE-2021-3609,HIGH,https://avd.aquasec.com/nvd/cve-2021-3609,4.15.0-147.151,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-11884,HIGH,https://avd.aquasec.com/nvd/cve-2020-11884,4.15.0-99.100,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-12351,HIGH,https://avd.aquasec.com/nvd/cve-2020-12351,4.15.0-122.124,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-12654,HIGH,https://avd.aquasec.com/nvd/cve-2020-12654,4.15.0-96.97,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-14386,HIGH,https://avd.aquasec.com/nvd/cve-2020-14386,4.15.0-117.118,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-16119,HIGH,https://avd.aquasec.com/nvd/cve-2020-16119,4.15.0-121.123,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-27170,HIGH,https://avd.aquasec.com/nvd/cve-2020-27170,4.15.0-140.144,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-27171,HIGH,https://avd.aquasec.com/nvd/cve-2020-27171,4.15.0-140.144,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2020-28374,HIGH,https://avd.aquasec.com/nvd/cve-2020-28374,4.15.0-132.136,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2021-27365,HIGH,https://avd.aquasec.com/nvd/cve-2021-27365,4.15.0-139.143,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2021-29154,HIGH,https://avd.aquasec.com/nvd/cve-2021-29154,4.15.0-142.146,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2021-33909,HIGH,https://avd.aquasec.com/nvd/cve-2021-33909,4.15.0-151.157,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2021-3493,HIGH,https://avd.aquasec.com/nvd/cve-2021-3493,4.15.0-142.146,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2021-3600,HIGH,https://avd.aquasec.com/nvd/cve-2021-3600,4.15.0-147.151,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,linux-tools-common,ubuntu,CVE-2021-3609,HIGH,https://avd.aquasec.com/nvd/cve-2021-3609,4.15.0-147.151,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,openssl,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,openssl,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
+rancher/istio-kubectl:1.4.6,sudo,ubuntu,CVE-2021-3156,HIGH,https://avd.aquasec.com/nvd/cve-2021-3156,1.8.21p2-3ubuntu1.4,,ignore,"Image is required only for a deprecated chart, rancher-gatekeeper-operator:0.1.0."
 rancher/klipper-helm:v0.4.3,apk-tools,alpine,CVE-2021-30139,HIGH,https://avd.aquasec.com/nvd/cve-2021-30139,2.10.6-r0,,triaged,
 rancher/klipper-helm:v0.4.3,busybox,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.31.1-r20,,triaged,
 rancher/klipper-helm:v0.4.3,git,alpine,CVE-2021-21300,HIGH,https://avd.aquasec.com/nvd/cve-2021-21300,2.26.3-r0,,triaged,
