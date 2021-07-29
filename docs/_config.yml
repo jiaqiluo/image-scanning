@@ -1,3 +1,3 @@
-url: "https://rancher.com/docs" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/image-scanning" # the subpath of your site, e.g. /blog
+url: "http://docs.rancher.com/image-scanning" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
 title: "Rancher CVEs" # the name of your site, e.g. ACME Corp.
