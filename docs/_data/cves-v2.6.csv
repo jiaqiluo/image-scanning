@@ -11,17 +11,17 @@ rancher/configmap-reload:v0.3.0-rancher4,libc6,debian,CVE-2020-1751,HIGH,https:/
 rancher/configmap-reload:v0.3.0-rancher4,libc6,debian,CVE-2020-1752,HIGH,https://avd.aquasec.com/nvd/cve-2020-1752,,,triaged,
 rancher/configmap-reload:v0.3.0-rancher4,libc6,debian,CVE-2021-3326,HIGH,https://avd.aquasec.com/nvd/cve-2021-3326,,,triaged,
 rancher/coredns-coredns:1.8.3,github.com/gogo/protobuf,gobinary,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
-rancher/coreos-flannel:v0.13.0-rancher1,apk-tools,alpine,CVE-2021-30139,HIGH,https://avd.aquasec.com/nvd/cve-2021-30139,2.10.6-r0,,triaged,
-rancher/coreos-flannel:v0.13.0-rancher1,busybox,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.31.1-r20,,triaged,
-rancher/coreos-flannel:v0.13.0-rancher1,libcrypto1.1,alpine,CVE-2021-23840,HIGH,https://avd.aquasec.com/nvd/cve-2021-23840,1.1.1j-r0,,triaged,
-rancher/coreos-flannel:v0.13.0-rancher1,libcrypto1.1,alpine,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1.1.1k-r0,,triaged,
-rancher/coreos-flannel:v0.13.0-rancher1,libcurl,alpine,CVE-2020-8231,HIGH,https://avd.aquasec.com/nvd/cve-2020-8231,7.69.1-r2,,triaged,
-rancher/coreos-flannel:v0.13.0-rancher1,libcurl,alpine,CVE-2020-8285,HIGH,https://avd.aquasec.com/nvd/cve-2020-8285,7.69.1-r3,,triaged,
-rancher/coreos-flannel:v0.13.0-rancher1,libcurl,alpine,CVE-2020-8286,HIGH,https://avd.aquasec.com/nvd/cve-2020-8286,7.69.1-r3,,triaged,
-rancher/coreos-flannel:v0.13.0-rancher1,libcurl,alpine,CVE-2021-22901,HIGH,https://avd.aquasec.com/nvd/cve-2021-22901,7.77.0-r0,,triaged,
-rancher/coreos-flannel:v0.13.0-rancher1,libssl1.1,alpine,CVE-2021-23840,HIGH,https://avd.aquasec.com/nvd/cve-2021-23840,1.1.1j-r0,,triaged,
-rancher/coreos-flannel:v0.13.0-rancher1,libssl1.1,alpine,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1.1.1k-r0,,triaged,
-rancher/coreos-flannel:v0.13.0-rancher1,ssl_client,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.31.1-r20,,triaged,
+rancher/coreos-flannel:v0.13.0-rancher1,apk-tools,alpine,CVE-2021-30139,HIGH,https://avd.aquasec.com/nvd/cve-2021-30139,2.10.6-r0,,ignore,Image is obsoleted by mirrored image for newer version
+rancher/coreos-flannel:v0.13.0-rancher1,busybox,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.31.1-r20,,ignore,Image is obsoleted by mirrored image for newer version
+rancher/coreos-flannel:v0.13.0-rancher1,libcrypto1.1,alpine,CVE-2021-23840,HIGH,https://avd.aquasec.com/nvd/cve-2021-23840,1.1.1j-r0,,ignore,Image is obsoleted by mirrored image for newer version
+rancher/coreos-flannel:v0.13.0-rancher1,libcrypto1.1,alpine,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1.1.1k-r0,,ignore,Image is obsoleted by mirrored image for newer version
+rancher/coreos-flannel:v0.13.0-rancher1,libcurl,alpine,CVE-2020-8231,HIGH,https://avd.aquasec.com/nvd/cve-2020-8231,7.69.1-r2,,ignore,Image is obsoleted by mirrored image for newer version
+rancher/coreos-flannel:v0.13.0-rancher1,libcurl,alpine,CVE-2020-8285,HIGH,https://avd.aquasec.com/nvd/cve-2020-8285,7.69.1-r3,,ignore,Image is obsoleted by mirrored image for newer version
+rancher/coreos-flannel:v0.13.0-rancher1,libcurl,alpine,CVE-2020-8286,HIGH,https://avd.aquasec.com/nvd/cve-2020-8286,7.69.1-r3,,ignore,Image is obsoleted by mirrored image for newer version
+rancher/coreos-flannel:v0.13.0-rancher1,libcurl,alpine,CVE-2021-22901,HIGH,https://avd.aquasec.com/nvd/cve-2021-22901,7.77.0-r0,,ignore,Image is obsoleted by mirrored image for newer version
+rancher/coreos-flannel:v0.13.0-rancher1,libssl1.1,alpine,CVE-2021-23840,HIGH,https://avd.aquasec.com/nvd/cve-2021-23840,1.1.1j-r0,,ignore,Image is obsoleted by mirrored image for newer version
+rancher/coreos-flannel:v0.13.0-rancher1,libssl1.1,alpine,CVE-2021-3450,HIGH,https://avd.aquasec.com/nvd/cve-2021-3450,1.1.1k-r0,,ignore,Image is obsoleted by mirrored image for newer version
+rancher/coreos-flannel:v0.13.0-rancher1,ssl_client,alpine,CVE-2021-28831,HIGH,https://avd.aquasec.com/nvd/cve-2021-28831,1.31.1-r20,,ignore,Image is obsoleted by mirrored image for newer version
 rancher/fleet-agent:v0.3.6-rc7,github.com/deislabs/oras,alpine,CVE-2021-21272,HIGH,https://avd.aquasec.com/nvd/cve-2021-21272,v0.9.0,,triaged,
 rancher/fleet-agent:v0.3.6-rc7,github.com/dgrijalva/jwt-go,alpine,CVE-2020-26160,HIGH,https://avd.aquasec.com/nvd/cve-2020-26160,,,triaged,
 rancher/fleet-agent:v0.3.6-rc7,github.com/gogo/protobuf,alpine,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
