@@ -1883,7 +1883,7 @@ rancher/rke2-cloud-provider:v0.0.1-build20210629,glib2,redhat,CVE-2016-3191,HIGH
 rancher/rke2-cloud-provider:v0.0.1-build20210629,glibc,redhat,CVE-2019-1010022,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-1010022,,,triaged,
 rancher/rke2-cloud-provider:v0.0.1-build20210629,glibc-common,redhat,CVE-2019-1010022,CRITICAL,https://avd.aquasec.com/nvd/cve-2019-1010022,,,triaged,
 rancher/rke2-cloud-provider:v0.0.1-build20210629,sqlite,redhat,CVE-2019-5827,HIGH,https://avd.aquasec.com/nvd/cve-2019-5827,,,triaged,
-rancher/rke2-upgrade:v1.21.3-rke2r1,github.com/dgrijalva/jwt-go,alpine,CVE-2020-26160,HIGH,https://avd.aquasec.com/nvd/cve-2020-26160,,,triaged,
+rancher/rke2-upgrade:v1.21.3-rc1-rke2r2,github.com/dgrijalva/jwt-go,alpine,CVE-2020-26160,HIGH,https://avd.aquasec.com/nvd/cve-2020-26160,,,triaged,
 rancher/security-scan:v0.1.14,libssl1.1,ubuntu,CVE-2020-1971,HIGH,https://avd.aquasec.com/nvd/cve-2020-1971,1.1.1-1ubuntu2.1~18.04.7,,triaged,
 rancher/security-scan:v0.1.14,libssl1.1,ubuntu,CVE-2021-3449,HIGH,https://avd.aquasec.com/nvd/cve-2021-3449,1.1.1-1ubuntu2.1~18.04.9,,triaged,
 rancher/security-scan:v0.1.14,libsystemd0,ubuntu,CVE-2021-33910,HIGH,https://avd.aquasec.com/nvd/cve-2021-33910,237-3ubuntu10.49,,triaged,
