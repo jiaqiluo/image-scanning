@@ -1858,8 +1858,8 @@ rancher/rancher-agent:master-head,github.com/opencontainers/runc,suse linux ente
 rancher/rancher-agent:master-head,github.com/gogo/protobuf,suse linux enterprise server,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
 rancher/rancher-agent:master-head,golang.org/x/crypto,suse linux enterprise server,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,waiting,Downstream issue: https://github.com/c-bata/kube-prompt/issues/83
 rancher/rancher-agent:master-head,golang.org/x/crypto,suse linux enterprise server,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,waiting,Downstream issue: https://github.com/c-bata/kube-prompt/issues/83
-rancher/rancher-operator:v0.1.4,github.com/gogo/protobuf,alpine,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
-rancher/rancher-operator:v0.1.4,golang.org/x/crypto,alpine,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
+rancher/rancher-operator:v0.1.4,github.com/gogo/protobuf,alpine,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,ignore,rancher-operator has moved into rancher
+rancher/rancher-operator:v0.1.4,golang.org/x/crypto,alpine,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,ignore,rancher-operator has moved into rancher
 rancher/rancher:master-head,github.com/docker/distribution,suse linux enterprise server,CVE-2017-11468,HIGH,https://avd.aquasec.com/nvd/cve-2017-11468,v2.7.0-rc.0+incompatible,,triaged,
 rancher/rancher:master-head,github.com/opencontainers/runc,suse linux enterprise server,CVE-2019-16884,HIGH,https://avd.aquasec.com/nvd/cve-2019-16884,v1.0.0-rc8.0.20190930145003-cad42f6e0932,,triaged,
 rancher/rancher:master-head,github.com/opencontainers/runc,suse linux enterprise server,CVE-2019-19921,HIGH,https://avd.aquasec.com/nvd/cve-2019-19921,v1.0.0-rc9.0.20200122160610-2fc03cc11c77,,triaged,
