@@ -1904,10 +1904,10 @@ rancher/security-scan:v0.2.3,github.com/dgrijalva/jwt-go,ubuntu,CVE-2020-26160,H
 rancher/security-scan:v0.2.3,github.com/gogo/protobuf,ubuntu,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
 rancher/security-scan:v0.2.3,golang.org/x/crypto,ubuntu,CVE-2020-29652,HIGH,https://avd.aquasec.com/nvd/cve-2020-29652,v0.0.0-20201216223049-8b5274cf687f,,triaged,
 rancher/security-scan:v0.2.3,golang.org/x/crypto,ubuntu,CVE-2020-9283,HIGH,https://avd.aquasec.com/nvd/cve-2020-9283,v0.0.0-20200220183623-bac4c82f6975,,triaged,
-rancher/shell:v0.1.8,github.com/docker/distribution,alpine,CVE-2017-11468,HIGH,https://avd.aquasec.com/nvd/cve-2017-11468,v2.7.0-rc.0+incompatible,,triaged,
-rancher/shell:v0.1.8,github.com/opencontainers/runc,alpine,CVE-2019-16884,HIGH,https://avd.aquasec.com/nvd/cve-2019-16884,v1.0.0-rc8.0.20190930145003-cad42f6e0932,,triaged,
-rancher/shell:v0.1.8,github.com/opencontainers/runc,alpine,CVE-2019-19921,HIGH,https://avd.aquasec.com/nvd/cve-2019-19921,v1.0.0-rc9.0.20200122160610-2fc03cc11c77,,triaged,
-rancher/shell:v0.1.8,github.com/docker/distribution,alpine,CVE-2017-11468,HIGH,https://avd.aquasec.com/nvd/cve-2017-11468,v2.7.0-rc.0+incompatible,,triaged,
+rancher/shell:v0.1.8,github.com/docker/distribution,alpine,CVE-2017-11468,HIGH,https://avd.aquasec.com/nvd/cve-2017-11468,v2.7.0-rc.0+incompatible,,waiting,Upstream issue: https://github.com/distribution/distribution/issues/3085
+rancher/shell:v0.1.8,github.com/opencontainers/runc,alpine,CVE-2019-16884,HIGH,https://avd.aquasec.com/nvd/cve-2019-16884,v1.0.0-rc8.0.20190930145003-cad42f6e0932,,waiting,Upstream PR: https://github.com/helm/helm/pull/9970
+rancher/shell:v0.1.8,github.com/opencontainers/runc,alpine,CVE-2019-19921,HIGH,https://avd.aquasec.com/nvd/cve-2019-19921,v1.0.0-rc9.0.20200122160610-2fc03cc11c77,,waiting,Upstream PR: https://github.com/helm/helm/pull/9970
+rancher/shell:v0.1.8,github.com/docker/distribution,alpine,CVE-2017-11468,HIGH,https://avd.aquasec.com/nvd/cve-2017-11468,v2.7.0-rc.0+incompatible,,waiting,Upstream issue: https://github.com/distribution/distribution/issues/3085
 rancher/shell:v0.1.8,github.com/gogo/protobuf,alpine,CVE-2021-3121,HIGH,https://avd.aquasec.com/nvd/cve-2021-3121,v1.3.2,,triaged,
-rancher/shell:v0.1.8,github.com/opencontainers/runc,alpine,CVE-2019-16884,HIGH,https://avd.aquasec.com/nvd/cve-2019-16884,v1.0.0-rc8.0.20190930145003-cad42f6e0932,,triaged,
-rancher/shell:v0.1.8,github.com/opencontainers/runc,alpine,CVE-2019-19921,HIGH,https://avd.aquasec.com/nvd/cve-2019-19921,v1.0.0-rc9.0.20200122160610-2fc03cc11c77,,triaged,
+rancher/shell:v0.1.8,github.com/opencontainers/runc,alpine,CVE-2019-16884,HIGH,https://avd.aquasec.com/nvd/cve-2019-16884,v1.0.0-rc8.0.20190930145003-cad42f6e0932,,waiting,Upstream PR: https://github.com/helm/helm/pull/9970
+rancher/shell:v0.1.8,github.com/opencontainers/runc,alpine,CVE-2019-19921,HIGH,https://avd.aquasec.com/nvd/cve-2019-19921,v1.0.0-rc9.0.20200122160610-2fc03cc11c77,,waiting,Upstream PR: https://github.com/helm/helm/pull/9970
